@@ -1,0 +1,35 @@
+; 第三章 - 故事：退缩
+changeBg:bar_night.png;
+bgm:dark_theme.mp3;
+
+你:也许...我们应该保持距离。;
+
+:她的手松开了。;
+
+changeFigure:chenwei_casual_lost.png -left;
+陈薇:你害怕了。;
+
+你:我...;
+
+陈薇:没关系，我理解。;
+
+:她站起身，拿起包。;
+
+陈薇:我不该把这些告诉你的。;
+陈薇:太沉重了。;
+
+:她转身离开。;
+
+陈薇:晚安，李昂。;
+
+:她走了，留下你一个人坐在吧台前。;
+
+; 数值变化
+setVar:affection=(affection)-30;
+setVar:sanity=(sanity)+15;
+setVar:danger=(danger)-10;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch3_alone_end.txt;

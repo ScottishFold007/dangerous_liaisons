@@ -1,0 +1,36 @@
+[
+  {
+    "duration": 0
+  },
+  {
+    "glitchFilm": 1,
+    "rgbFilm": 1,
+    "duration": 200
+  },
+  {
+    "glitchFilm": 0,
+    "rgbFilm": 0,
+    "duration": 100
+  },
+  {
+    "glitchFilm": 1,
+    "rgbFilm": 1,
+    "brightness": 1.5,
+    "duration": 150
+  },
+  {
+    "glitchFilm": 0,
+    "rgbFilm": 0,
+    "brightness": 1,
+    "duration": 100
+  },
+  {
+    "glitchFilm": 1,
+    "duration": 100
+  },
+  {
+    "glitchFilm": 0,
+    "rgbFilm": 0,
+    "duration": 300
+  }
+]

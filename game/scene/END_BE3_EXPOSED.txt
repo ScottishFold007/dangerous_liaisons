@@ -1,0 +1,26 @@
+; 坏结局3：关系曝光
+pixiInit;
+pixiPerform:rain;
+changeBg:black.png -next -transform={"brightness":0.6,"saturation":0.3};
+bgm:yao_xiaotang-clouds_that_bloom.mp3;
+unlockBgm:yao_xiaotang-clouds_that_bloom.mp3 -name=会开花的云 -series=结局;
+; 结局文字
+intro:【坏结局：关系曝光】 -hold;
+
+:第二天，整个公司都知道了。;
+:CEO和下属的不正当关系。;
+
+:董事会要求陈薇给出解释。;
+:同事们用异样的眼光看着你。;
+
+:一周后，你被调离项目组。;
+:一个月后，你主动辞职。;
+
+:陈薇的声誉也受到了影响。;
+:她再也没有联系过你。;
+
+:有些关系，一旦曝光，就再也回不去了。;
+
+intro:完成度：15%|解锁：BE3结局|提示：在办公室里，永远要保持警惕。 -hold;
+pixiInit;
+end;

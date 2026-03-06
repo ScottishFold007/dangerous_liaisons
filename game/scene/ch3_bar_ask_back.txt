@@ -1,0 +1,29 @@
+; 第三章 - 酒吧：反问
+changeBg:bar_night.png -next;
+bgm:jazz_bar.mp3;
+
+你:你呢？你后悔吗？;
+
+:她沉默了很久。;
+
+changeFigure:chenwei_casual_thoughtful.png -left;
+陈薇:我不知道。;
+
+:她喝了一口酒。;
+
+陈薇:有时候我觉得，也许我不应该录用你。;
+陈薇:但有时候我又觉得，如果不录用你，我会后悔一辈子。;
+
+:她转头看着你。;
+
+陈薇:李昂，我想告诉你一些事。关于我的过去。;
+陈薇:听完之后，你再决定要不要继续。;
+
+; 数值变化
+setVar:affection=(affection)+10;
+setVar:sanity=(sanity)+10;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:ch3_chenwei_story.txt;

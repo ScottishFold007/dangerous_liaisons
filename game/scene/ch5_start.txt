@@ -1,0 +1,76 @@
+; 第五章 - 危机爆发
+; sanity极低：冲动路线
+changeScene:ch5_start_reckless.txt -when=sanity<30;
+
+changeBg:black.png;
+bgm:none;
+
+; 章节标题
+intro:周末 -hold;
+
+:周五晚上的对话后，你和陈薇约定周一public_rel。 -when=public_rel==1;
+:周末过后，你和陈薇的关系更近了一步。但周一回到公司，一切似乎没那么简单。 -when=public_rel==0;
+:这个周末，你们去了郊外的别墅。;
+:那是陈薇的私人别墅，远离城市，四周是山和湖。;
+
+:在这里，你们不用担心任何人。;
+:可以像普通情侣一样，牵手、拥抱、说笑。;
+
+; public_rel：别墅场景的对话更坦然
+:（已经公开了，不用再偷偷摸摸。这种感觉真好。） -when=public_rel==1;
+
+; personality差异：别墅周末的情感表达
+:（终于可以放松了！这个周末，什么工作都不想。） -when=personality==outgoing;
+:（难得的安宁。不过周一的事...还是得提前想想对策。） -when=personality==cautious;
+:（安静真好。不用应付任何人。） -when=personality==cold;
+
+:周六晚上，你们坐在壁炉前。;
+:陈薇靠在你肩上，看着窗外的星空。;
+
+changeBg:villa_night.png;
+bgm:romantic_theme.mp3;
+
+changeFigure:chenwei_casual_gentle.png -left;
+陈薇:李昂，你后悔吗？;
+
+你:不后悔。;
+
+陈薇:周一之后，一切都会改变。;
+陈薇:董事会可能会质疑我，同事们会议论你。;
+陈薇:我们可能都会付出代价。;
+
+:她抬起头，看着你。;
+
+陈薇:但我不后悔。;
+陈薇:至少，我们不用再躲了。;
+
+:你吻了她。;
+
+pixiInit;
+pixiPerform:cherryBlossoms;
+changeBg:villa_night.png -transform={"godrayFilm":1,"brightness":1.15};
+
+; 心跳 —— 她第一次说"我爱你"
+setAnimation:heartbeat-pulse -target=fig-left;
+
+陈薇:李昂，我爱你。;
+
+:这是她第一次说这三个字。;
+
+; 深情光晕 —— 告白的神圣时刻
+setAnimation:confession-glow -target=bg-main;
+
+你:我也爱你。;
+
+:那一夜，你们都睡得很安稳。;
+:仿佛暴风雨来临前的宁静。;
+
+pixiInit;
+
+; 章节标题
+intro:第五章：危机爆发 -hold;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch5_villa_morning.txt;

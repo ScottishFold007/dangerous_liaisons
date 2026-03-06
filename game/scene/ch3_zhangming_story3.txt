@@ -1,0 +1,26 @@
+; 第三章 - 张明的故事（第三部分）
+changeBg:bar_night.png -next;
+bgm:dark_theme.mp3;
+
+:她转头看着你。;
+
+changeFigure:chenwei_casual_serious.png -left;
+陈薇:所以，李昂，你现在明白了吗？;
+陈薇:为什么我要这么小心，为什么我要公私分明。;
+陈薇:因为我不能再犯同样的错误。;
+
+:她的眼神里有脆弱，也有坚定。;
+
+changeFigure:chenwei_casual_gentle.png -left;
+陈薇:但是...遇到你之后，我发现自己还是会心动。;
+陈薇:那天晚上，在酒吧，我以为你只是一个陌生人。;
+陈薇:但当我看到你的简历，我就知道...命运在捉弄我。;
+
+:她握住你的手。;
+
+陈薇:李昂，我不知道我们的未来会怎样。;
+陈薇:但我想试试。哪怕...可能会再次受伤。;
+
+; 选择分支
+changeFigure:none -left -next;
+choose:我不是张明。我不会伤害你:ch3_story_promise.txt|我愿意和你一起面对:ch3_story_together.txt|也许...我们应该保持距离:ch3_story_retreat.txt;

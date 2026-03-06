@@ -1,0 +1,41 @@
+; 第二章 - 危机选择3：谨慎应对
+changeBg:office_meeting.png;
+bgm:tense_meeting.mp3;
+
+你:陈总，我觉得我们应该先和客户详细沟通。;
+你:了解他们具体不满意的地方，再针对性地调整。;
+你:这样才能确保方向正确。;
+
+:会议室里有人小声议论。;
+
+changeFigure:chenwei_suit_serious.png -left;
+陈薇:李总监，客户已经表达了不满。;
+陈薇:现在不是慢慢沟通的时候。;
+陈薇:我需要你给出一个明确的解决方案。;
+
+你:但是...;
+
+陈薇:没有但是。;
+陈薇:作为项目负责人，你必须有决断力。;
+
+:她的语气很严厉。;
+:你感觉到了压力。;
+
+你:我明白了。那我建议...优化现有方案。;
+
+陈薇:好。那就这样。;
+陈薇:散会。;
+
+; 数值变化
+setVar:reputation=(reputation)-5;
+setVar:affection=(affection)-10;
+setVar:sanity=(sanity)+10;
+setVar:danger=(danger)-5;
+
+:会议结束后，你感觉陈薇对你有些失望。;
+:她似乎期待你能更果断一些。;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch2_after_meeting_pressure.txt;

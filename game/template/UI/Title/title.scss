@@ -1,0 +1,103 @@
+// Amber Dusk 主题 - 标题页样式
+// 琥珀黄昏：日常 / 治愈 / 温暖
+// 色板：深棕底 #1A1209 | 暖奶白 #F5E6D3 | 琥珀金 #D4A03C | 深琥珀 #5C3D1A
+
+.Title_main {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 13;
+}
+
+.Title_buttonList {
+  font-family: "思源宋体", "Noto Serif SC", Georgia, serif;
+  display: flex;
+  position: absolute;
+  left: 0;
+  min-width: 25%;
+  height: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column;
+  transition: background 0.75s;
+  padding-left: 120px;
+}
+
+.Title_button {
+  font-weight: bold;
+  text-align: center;
+  flex: 0 1 auto;
+  cursor: pointer;
+  padding: 1em 2em 1em 2em;
+  margin: 20px 0;
+  transition: all 0.33s;
+  backdrop-filter: blur(5px);
+  border-radius: 4px;
+  transform: skewX(-10deg);
+  background: linear-gradient(to right, rgba(92, 61, 26, 0.35), rgba(92, 61, 26, 0.12));
+  border-left: 3px solid rgba(212, 160, 60, 0.35);
+
+  &:hover {
+    padding: 1em 6em 1em 3em;
+    background: linear-gradient(to right, rgba(92, 61, 26, 0.5), rgba(92, 61, 26, 0.2));
+    border-left-color: rgba(212, 160, 60, 0.75);
+    text-shadow: 0 0 12px rgba(212, 160, 60, 0.35);
+  }
+}
+
+.Title_button_text {
+  color: #D4A03C;
+  padding: 0 0.5em 0 0.5em;
+  font-size: 200%;
+  font-family: "思源宋体", "Noto Serif SC", Georgia, serif;
+  letter-spacing: 0.15em;
+}
+
+.Title_backup_background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 13;
+  background: linear-gradient(135deg, #1A1209 0%, #231A0E 50%, #1A1209 100%);
+}
+
+// 斜阳光线纹理装饰
+.Title_backup_background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(ellipse at 70% 30%, rgba(212, 160, 60, 0.08) 0%, transparent 55%),
+    radial-gradient(ellipse at 30% 60%, rgba(212, 160, 60, 0.05) 0%, transparent 40%),
+    radial-gradient(ellipse at 85% 75%, rgba(245, 230, 211, 0.03) 0%, transparent 35%),
+    linear-gradient(135deg, transparent 40%, rgba(212, 160, 60, 0.02) 50%, transparent 60%);
+  pointer-events: none;
+  animation: sunsetGlow 7s ease-in-out infinite;
+}
+
+.Title_backup_background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(245, 230, 211, 0.06) 0%, transparent 1px),
+    radial-gradient(circle at 35% 50%, rgba(245, 230, 211, 0.05) 0%, transparent 1px),
+    radial-gradient(circle at 55% 15%, rgba(245, 230, 211, 0.07) 0%, transparent 1px),
+    radial-gradient(circle at 75% 65%, rgba(245, 230, 211, 0.05) 0%, transparent 1px),
+    radial-gradient(circle at 90% 35%, rgba(245, 230, 211, 0.06) 0%, transparent 1px),
+    radial-gradient(circle at 25% 80%, rgba(245, 230, 211, 0.04) 0%, transparent 1px);
+  background-size: 100% 100%;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+@keyframes sunsetGlow {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}

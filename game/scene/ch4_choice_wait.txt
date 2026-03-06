@@ -1,0 +1,27 @@
+; 第四章 - 选择：等待
+changeBg:meeting_room_dark.png -next;
+bgm:serious_theme.mp3;
+
+你:能不能再等等？也许情况会好转。;
+
+changeFigure:chenwei_suit_shirt_desperate.png -left;
+陈薇:等？等到什么时候？;
+
+:她的语气有些激动。;
+
+陈薇:李昂，我已经等够了。;
+陈薇:和张明的时候，我也是这样想的。等等看，也许会好转。;
+陈薇:结果呢？越拖越糟。;
+
+:她看着你，眼神里有失望。;
+
+陈薇:我需要一个明确的答案。;
+陈薇:公开，还是结束。;
+
+; 数值变化
+setVar:affection=(affection)-15;
+setVar:sanity=(sanity)-10;
+
+; 选择分支
+changeFigure:none -left -next;
+choose:那就公开吧:ch4_forced_public.txt|对不起...那就结束吧:ch4_forced_end.txt;

@@ -1,0 +1,33 @@
+; 第四章 - 决定性对话
+changeBg:meeting_room_dark.png;
+bgm:serious_theme.mp3;
+
+changeFigure:chenwei_casual_shirt_nervous.png  -left;
+陈薇:我们不能再这样下去了。;
+
+你:我知道。;
+
+陈薇:流言越来越多，刚才又差点被发现...;
+陈薇:李昂，我们必须做出选择。;
+
+你:什么选择？;
+
+陈薇:要么公开我们之间的关系，要么结束关系~;
+
+:她的语气很坚定。;
+
+陈薇:偷偷摸摸的日子，我受够了。;
+陈薇:我不想再像和张明那样，最后弄得一团糟。;
+
+:她站起身，走到你面前。;
+
+陈薇:如果公开，我可能会被董事会质疑，你也会被说闲话。;
+陈薇:如果结束，我们可以保持职业关系，各自安好。;
+
+:她的眼神很复杂。;
+
+陈薇:你选哪个？;
+
+; 选择分支
+changeFigure:none -left;
+choose:我选择公开。我们一起面对:ch4_choice_public.txt|我选择结束。这样对大家都好:ch4_choice_end.txt|能不能再等等？:ch4_choice_wait.txt;

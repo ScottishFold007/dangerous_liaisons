@@ -1,0 +1,39 @@
+; 第一章：直接询问
+changeBg:office_room.png;
+bgm:work_busy.mp3;
+
+你:陈总，上一任项目总监发生了什么？;
+
+changeFigure:chenwei_suit_serious.png;
+
+:她没料到你会这么直接。;
+
+陈薇:你很大胆。;
+
+:她沉默了几秒，像在考虑要不要回答。;
+
+陈薇:他能力很强，但犯了一个致命的错误。;
+
+你:什么错误？;
+
+陈薇:他以为自己可以利用私人关系，在工作上走捷径。;
+
+:她的眼神变得冰冷。;
+
+陈薇:我最讨厌的就是这种人。;
+
+:这是警告，也是考验。;
+
+陈薇:所以，李总监，我希望你不要犯同样的错误。;
+
+; 数值变化
+setVar:affection=(affection)+10;
+setVar:sanity=(sanity)+12;
+setVar:reputation=(reputation)+5;
+setVar:danger=(danger)+15;
+setVar:know_secret=1;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch1_meeting.txt;

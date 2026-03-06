@@ -1,0 +1,21 @@
+; 第二章 - 会议后：冷淡的气氛
+changeBg:office_desk.png -next;
+bgm:work_pressure.mp3;
+
+:会议结束后，你回到办公室。;
+:陈薇没有再找你，也没有发消息。;
+:整个下午，你都在埋头修改方案。;
+
+:傍晚时分，你看到陈薇从办公室走出来。;
+:她经过你的位置时，只是点了点头，没有停留。;
+
+:（她似乎对我的表现不太满意...）;
+:（我是不是太保守了？）;
+
+:你继续工作到晚上8点。;
+:办公室里的人越来越少。;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:ch2_work_hard.txt;

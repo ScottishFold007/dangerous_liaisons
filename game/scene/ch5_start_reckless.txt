@@ -1,0 +1,180 @@
+; 第五章 - 冲动变体开场
+; 当sanity<30时触发：主角行为更激进、更不冷静
+changeBg:black.png;
+bgm:none;
+
+; 章节标题
+intro:周末 -hold;
+
+:周五晚上的对话后，你和陈薇约定周一public_rel。 -when=public_rel==1;
+:周末过后，你和陈薇的关系更近了一步。但周一回到公司，一切似乎没那么简单。 -when=public_rel==0;
+:这个周末，你们去了郊外的别墅。;
+
+:但你的状态很不对。;
+:这几周发生的事情让你越来越焦躁。;
+:（流言、暗箭、猜忌...我受够了。）;
+:（为什么不能光明正大地在一起？）;
+
+:路上，你开得很快。;
+:陈薇几次提醒你减速，你嘴上答应，脚下没变。;
+
+changeBg:villa_night.png;
+bgm:romantic_theme.mp3;
+unlockBgm:romantic_theme.mp3 -name=浪漫夜曲 -series=温情;
+
+changeFigure:chenwei_casual_gentle.png -left;
+
+:到了别墅，你把车门摔得很响。;
+:陈薇看着你，眉头微皱。;
+
+陈薇:李昂，你今天怎么了？;
+
+你:没怎么。;
+
+:你的语气比想象中冲。;
+
+陈薇:...你在生气？;
+
+你:我不是生气。;
+你:我是烦。;
+你:烦那些在背后嚼舌根的人，烦那些看我们笑话的人。;
+
+:你在客厅里来回踱步，像一头被困的狮子。;
+
+changeFigure:chenwei_casual_serious.png -left;
+陈薇:李昂，坐下来。;
+
+:她的声音很稳，但带着一丝无奈。;
+
+陈薇:我知道你压力大。我也有。;
+陈薇:但你这样...只会让情况更糟。;
+
+:你停下脚步。;
+:深呼吸。;
+
+:（她说得对。）;
+:（我不能被情绪控制。）;
+:（...但理性这东西，说起来容易。）;
+
+; 选择分支
+changeFigure:none -left;
+choose:你说得对，我冷静一下:reckless_calm|我就是忍不了，周一我要当面对质那些人:reckless_confront|对不起...我不该冲你发火:reckless_apologize;
+
+; ===== 选择1：试图冷静 =====
+label:reckless_calm;
+
+:你坐下来，双手捂住脸。;
+
+你:对不起。最近太焦虑了。;
+
+changeFigure:chenwei_casual_gentle.png -left;
+:陈薇走过来，坐在你旁边。;
+:把你的手从脸上拿开。;
+
+陈薇:看着我。;
+
+:你看着她。;
+
+陈薇:不管发生什么，我们一起面对。好不好？;
+
+:她的眼神温柔但坚定。;
+:像是暴风雨里的锚。;
+
+你:好。;
+
+setVar:sanity=(sanity)+10;
+setVar:affection=(affection)+5;
+
+jumpLabel:reckless_converge;
+
+; ===== 选择2：想要对质 =====
+label:reckless_confront;
+
+你:周一我要找老刘，当面问清楚。;
+你:是不是他在背后搞鬼？;
+
+changeFigure:chenwei_casual_serious.png -left;
+陈薇:李昂！;
+
+:她的声音突然严厉了。;
+
+陈薇:你冲过去能怎样？;
+陈薇:打他一顿？骂他一顿？;
+陈薇:然后呢？他正好有理由告你。;
+
+:你愣住了。;
+
+陈薇:冲动解决不了问题，只会制造更多问题。;
+陈薇:这一点，你应该比我清楚。;
+
+:（...她说得对。）;
+:（但我就是咽不下这口气。）;
+
+setVar:sanity=(sanity)-10;
+setVar:danger=(danger)+10;
+setVar:affection=(affection)-5;
+
+jumpLabel:reckless_converge;
+
+; ===== 选择3：道歉 =====
+label:reckless_apologize;
+
+你:对不起，陈薇。我不该冲你发火。;
+你:你不是我该生气的对象。;
+
+changeFigure:chenwei_casual_gentle.png -left;
+:她叹了口气，走过来抱住你。;
+
+陈薇:傻瓜。我不是怕你冲我发火。;
+陈薇:我是怕你这个状态...会伤到自己。;
+
+:她的声音很轻。;
+:你能感觉到，她也在害怕。;
+
+你:我会控制好的。;
+
+陈薇:嗯。我相信你。;
+
+setVar:affection=(affection)+8;
+setVar:sanity=(sanity)+5;
+
+jumpLabel:reckless_converge;
+
+; ===== 汇合点 =====
+label:reckless_converge;
+
+:那一夜，你们没有像原来计划的那样轻松度过。;
+:你躺在床上，盯着天花板，脑子里乱成一团。;
+
+:陈薇已经睡了。;
+:呼吸很浅，眉头微蹙，即使在睡梦中也不安宁。;
+
+:你小心翼翼地把她的发丝拨到耳后。;
+
+:（不管怎样...我不能让她一个人扛。）;
+:（周一，把一切都摊开。）;
+
+pixiInit;
+pixiPerform:cherryBlossoms;
+changeBg:villa_night.png -transform={"godrayFilm":1,"brightness":1.15};
+unlockCg:villa_night.png -name=月下告白 -series=5;
+
+setAnimation:heartbeat-pulse -target=fig-left;
+陈薇:李昂，我爱你。;
+:这是她第一次说这三个字。;
+
+setAnimation:confession-glow -target=bg-main;
+你:我也爱你。;
+
+:那一夜，你们都睡得不太安稳。;
+:仿佛都预感到了什么。;
+
+pixiInit;
+
+; 章节标题
+intro:第五章：危机爆发 -hold;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch5_villa_morning.txt;

@@ -1,0 +1,47 @@
+; 第四章 - 会议室：装作工作
+changeBg:meeting_room_dark.png;
+bgm:intimate_tension.mp3;
+
+:你们立刻分开。;
+:陈薇迅速走到白板前，拿起马克笔。;
+:你打开笔记本电脑。;
+
+playEffect:door_open.mp3;
+
+changeFigure:security_uniform_serious.png -right;
+保安:陈总？这么晚还在加班？;
+
+changeFigure:chenwei_suit_shirt_calm.png -left;
+陈薇:嗯，和李总监讨论项目细节。;
+
+保安:辛苦了。我巡查一下就走。;
+
+:保安看了看会议室，没有发现异常。;
+
+保安:那我不打扰了。陈总，李总监，别太晚。;
+
+changeFigure:none -right;
+:门关上了。脚步声远去。;
+:你和陈薇对视，都松了一口气。;
+
+changeFigure:chenwei_casual_shirt_nervous.png -left;
+陈薇:差点...;
+
+:她靠在桌子上，心跳还很快。;
+
+陈薇:太危险了。;
+
+你:是啊。;
+
+陈薇:我们...不能再这样了。;
+陈薇:李昂，我们需要做出选择。;
+
+; 数值变化
+setVar:affection=(affection)+10;
+setVar:danger=(danger)+25;
+setVar:sanity=(sanity)+15;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch4_decision_talk.txt;

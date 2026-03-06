@@ -1,0 +1,22 @@
+; 第四章 - 回避会面
+
+:你没有回复，直接下班了。;
+
+changeBg:apartment_night.png;
+bgm:lonely_theme.mp3;
+
+:回到家，你一直心神不宁。;
+:手机一直没有再响。;
+
+:（她会怎么想？）;
+:（我是不是太懦弱了？）;
+
+; 数值变化
+setVar:affection=(affection)-20;
+setVar:sanity=(sanity)-5;
+setVar:danger=(danger)-15;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch4_weekend_alone.txt;

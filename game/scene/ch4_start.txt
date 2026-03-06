@@ -1,0 +1,47 @@
+; 第四章 - 开场与条件分岔
+changeBg:office_morning.png;
+bgm:work_routine.mp3;
+
+:周一早上，你来到公司。;
+:气氛比以往更加紧张。;
+
+:走廊里，同事们窃窃私语。;
+:看到你，他们立刻停止了交谈。;
+
+:（流言越来越严重了...）;
+
+; personality差异：面对危机时的内心态度
+:（该来的总会来。兵来将挡，水来土掩！） -when=personality==outgoing;
+:（得想办法控制事态。不能让流言继续扩散。） -when=personality==cautious;
+:（随他们说去吧。嘴长在别人身上，我管不了。） -when=personality==cold;
+
+; impulsive：陈薇的措辞有所不同
+:（上次的事之后，陈薇发消息的语气明显谨慎了很多...） -when=impulsive==1;
+
+playEffect:phone_ring.wav;
+:你走进办公室，手机震动了。;
+
+; 根据好感度分岔：高好感走别墅深度路线，中低好感走办公室试探路线
+; 好感 >= 40 → 陈薇主动邀请去别墅（亲密路线）
+; 好感 < 40 → 陈薇通过工作邮件暗示见面（职场路线）
+
+; 高好感路线：别墅邀请
+:是陈薇的短信。 -when=affection>=40;
+intro:陈薇：周末来我别墅，我们需要谈谈。 -when=affection>=40;
+:你回复：好。 -when=affection>=40;
+intro:周五晚上... -when=affection>=40;
+changeFigure:none -left -when=affection>=40;
+changeFigure:none -when=affection>=40;
+changeFigure:none -right -when=affection>=40;
+changeScene:ch4_weekend_villa.txt -when=affection>=40;
+
+; 中低好感路线：办公室邀约
+:是陈薇的工作邮件。 -when=affection<40;
+intro:陈薇（邮件）：李总监，请在下班前到我办公室汇报项目进度。——陈薇 -when=affection<40;
+:看起来是正常的工作邮件。 -when=affection<40;
+:但你注意到，邮件最后有一个很小的符号：♥ -when=affection<40;
+:（她想见我。但现在这个时候...） -when=affection<40;
+changeFigure:none -left -when=affection<40;
+changeFigure:none -when=affection<40;
+changeFigure:none -right -when=affection<40;
+changeScene:ch4_office_meeting.txt -when=affection<40;

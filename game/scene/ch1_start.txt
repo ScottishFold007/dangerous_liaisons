@@ -1,0 +1,49 @@
+; 第一章：意外重逢
+
+changeBg:office_lobby.png;
+bgm:urban_morning.mp3;
+unlockBgm:urban_morning.mp3 -name=城市清晨 -series=日常;
+
+:今天是你入职新公司的第一天。;
+:这是一家中型互联网公司，主营企业级软件解决方案。;
+:你的职位是项目总监，年薪比上一家公司高了30%。;
+
+:（新的开始。）;
+; personality差异：入职第一天的内心感受
+:（这次，我要大干一场！新环境、新机会，想想就兴奋。） -when=personality==outgoing;
+:（这次，我要做得更好。一步一个脚印，稳扎稳打。） -when=personality==cautious;
+:（无所谓。不过是换了个地方打工而已。） -when=personality==cold;
+
+:你深吸一口气，走进大楼。;
+:前台接待员给了你一个访客证，让你在大厅等候。;
+
+前台:李总监，人事部的王经理马上就来接您。;
+你:好的，谢谢。;
+
+:你坐在大厅的沙发上，观察着这家公司。;
+:装修很现代，员工看起来都很年轻，气氛不错。;
+
+:十分钟后，一个三十多岁的男人走了过来。;
+
+changeFigure:wang_manager_smile.png -right;
+
+王经理:李总监！欢迎欢迎！我是人事部的王经理。;
+
+:他热情地握手，笑容很真诚。;
+
+王经理:面试的时候就觉得您很优秀，陈总也对您的简历很满意。;
+
+:（陈总？CEO吗？）;
+
+你:谢谢。我会努力的。;
+王经理:来，我带您去办公室。对了，陈总说要亲自见您，这可是特殊待遇。;
+
+:你跟着王经理走向电梯。;
+
+:（CEO亲自见新员工？这确实不常见。）;
+:（听说是个女强人，雷厉风行的那种。）;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch1_meet_ceo.txt;

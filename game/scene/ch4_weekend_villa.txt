@@ -1,0 +1,27 @@
+; 第四章 - 周末别墅
+changeBg:villa_living_room.png -next;
+bgm:peaceful_weekend.mp3;
+
+:周末，陈薇邀请你去她的别墅。;
+:那是一栋位于郊区的独栋别墅，安静而私密。;
+
+changeFigure:chenwei_casual_relaxed.png -left;
+陈薇:欢迎来到我的秘密基地。;
+
+你:很漂亮。;
+
+陈薇:这里是我唯一可以完全放松的地方。;
+陈薇:没有工作，没有压力，没有人认识我。;
+
+:她坐在沙发上，示意你也坐下。;
+:窗外是一片绿色的花园。;
+
+陈薇:李昂，我想问你一个问题。;
+
+你:什么问题？;
+
+陈薇:你...后悔吗？;
+
+; 选择分支
+changeFigure:none -left -next;
+choose:不后悔:ch4_villa_no_regret.txt|有时候会担心...:ch4_villa_worried.txt|你呢？你后悔吗？:ch4_villa_ask_back.txt;

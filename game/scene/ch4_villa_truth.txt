@@ -1,0 +1,62 @@
+; 第四章 - 别墅：真相揭示
+changeBg:villa_living_room.png;
+bgm:revelation_theme.mp3;
+unlockBgm:revelation_theme.mp3 -name=真相大白 -series=抉择;
+
+changeFigure:chenwei_casual_serious.png -left;
+
+; 对于未听过酒吧故事的玩家，补充最小上下文
+陈薇:李昂，有些事...我一直没有告诉你。 -when=know_secret==0;
+陈薇:关于这个公司，关于我父亲...关于我为什么会变成现在这样。 -when=know_secret==0;
+
+陈薇:李昂，你知道公司最近在做什么项目吗？;
+
+你:智能安防系统。;
+
+陈薇:对。但你知道这个系统的真正用途吗？;
+
+你:什么意思？;
+
+陈薇:这个系统...不只是用来安防的。;
+陈薇:它可以监控、追踪、收集数据。;
+陈薇:我们的客户，有政府部门，也有...一些特殊机构。;
+
+:你开始感到不安。;
+
+你:你是说...;
+
+changeBg:villa_living_room.png -transform={"glitchFilm":1,"brightness":0.8};
+unlockCg:villa_living_room.png -name=别墅真相 -series=4;
+
+陈薇:我是说，这个项目游走在法律的灰色地带。;
+陈薇:它合法，但不道德。;
+
+:她的眼神很复杂。;
+
+陈薇:我父亲当年创立这家公司，就是为了做这个。;
+陈薇:他说，商业就是这样，没有绝对的黑白。;
+陈薇:只要不违法，就可以做。;
+
+changeBg:villa_living_room.png -transform={};
+
+陈薇:但我...我有时候会怀疑。;
+
+你:那你为什么还要做？;
+
+陈薇:因为这是公司最大的收入来源。;
+陈薇:如果停掉这个项目，公司会倒闭，几百个员工会失业。;
+
+:她看着你。;
+
+陈薇:李昂，现在你知道了。;
+陈薇:你还愿意和我在一起吗？;
+
+; know_secret：之前已有所耳闻的玩家反应不同
+:（其实...我之前就隐约感觉到了。只是没想到这么直接。） -when=know_secret==1;
+
+; 表白过的玩家：更深的情感纠结
+:（我对她说过那句话...现在知道了这些，也不后悔。） -when=confessed==1;
+
+; 选择分支
+changeFigure:none -left;
+choose:我接受你，包括你的选择:ch4_truth_accept.txt|我需要时间考虑...:ch4_truth_hesitate.txt|我不能接受这个:ch4_truth_reject.txt;

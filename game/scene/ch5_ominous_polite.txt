@@ -1,0 +1,37 @@
+; 第五章 - 走廊：职业微笑
+changeBg:office_corridor.png -next;
+bgm:tension_subtle.mp3;
+
+你:谢谢关心，刘经理。;
+
+:你对他微微一笑。;
+:标准的职场微笑——嘴角上扬15度，眼神不带任何多余信息。;
+:这是你工作四年练出来的。;
+
+:（忍住。不要给他任何把柄。）;
+
+changeFigure:laoliu_smug.png -right;
+老刘:嗯？就这？;
+
+:他显然没料到你这么平静。;
+:笑容僵了一下。;
+
+老刘:行吧。那个...李总监，好好干。;
+老刘:年轻人嘛，前途无量。;
+
+:他拍了拍你的肩膀，走了。;
+:那只手的力道，说不上友好。;
+
+:（老狐狸。）;
+:（但你的试探，我接住了。）;
+
+:你整了整衣领，继续朝陈薇的办公室走去。;
+
+; 数值变化
+setVar:sanity=(sanity)+10;
+setVar:reputation=(reputation)+5;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:ch5_strategy.txt;

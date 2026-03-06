@@ -1,0 +1,24 @@
+; 第三章 - 酒吧：担心
+changeBg:bar_night.png;
+bgm:jazz_bar.mp3;
+
+你:有时候会担心...;
+你:担心流言会影响你，影响我们。;
+
+changeFigure:chenwei_casual_understanding.png -left;
+陈薇:我懂。;
+
+:她握住你的手。;
+
+陈薇:我也担心。但是...;
+陈薇:李昂，我想告诉你一些事。;
+陈薇:关于我的过去，关于为什么我会这么谨慎。;
+
+; 数值变化
+setVar:affection=(affection)+15;
+setVar:sanity=(sanity)+10;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch3_chenwei_story.txt;

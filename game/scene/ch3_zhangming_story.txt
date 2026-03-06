@@ -1,0 +1,29 @@
+; 第三章 - 张明的故事（第一部分）
+changeBg:bar_night.png -next;
+bgm:dark_theme.mp3;
+unlockBgm:dark_theme.mp3 -name=暗影浮现 -series=往事;
+
+changeFigure:chenwei_casual_cold.png -left;
+陈薇:张明，上一任项目总监。;
+陈薇:能力很强，野心也很大。;
+陈薇:他追求我，很执着。;
+
+:她喝了一口酒。;
+
+陈薇:我拒绝了很多次，但他不放弃。;
+陈薇:有一次，公司遇到危机，他帮我解决了。;
+陈薇:那天晚上，我喝多了...就像第一次遇到你那样。;
+
+:她的声音很低。;
+
+陈薇:我们在一起了。;
+陈薇:我以为，也许这次不一样。也许他是真心的。;
+
+:她的手在颤抖。;
+
+陈薇:但我错了。;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:ch3_zhangming_story2.txt;

@@ -1,0 +1,48 @@
+; 第二章 - 夜晚选择：大胆接受 🔥
+
+你:我也一直在想您。;
+
+:空气凝固了。;
+:陈薇看着你，眼神复杂。;
+
+changeFigure:chenwei_suit_gentle.png -left;
+陈薇:李昂...;
+陈薇:你知道你在说什么吗？;
+
+你:我知道。;
+
+:她沉默了几秒钟。;
+:然后，她伸出手，轻轻抚摸你的脸颊。;
+
+陈薇:你真的...很大胆。;
+
+:她的手很温暖。;
+:你的心跳快得像要跳出来。;
+
+陈薇:但是...不是现在。;
+
+你:为什么？;
+
+陈薇:因为我想确定...;
+陈薇:你想要的，是我这个人...;
+陈薇:还是只是一场刺激的游戏。;
+
+:她收回手，站起身。;
+
+陈薇:证明给我看。;
+陈薇:如果你是认真的...;
+陈薇:我会给你机会的。;
+
+:她离开了。;
+:你坐在那里，久久无法平静。;
+
+; 数值变化
+setVar:affection=(affection)+25;
+setVar:sanity=(sanity)-10;
+setVar:danger=(danger)+20;
+setVar:confessed=1;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch2_end.txt;

@@ -1,0 +1,242 @@
+; 第六章 - 董事会对峙
+changeBg:boardroom.png;
+bgm:crisis_climax.mp3;
+
+:下午三点。;
+:你看了看手机——2:57。;
+:你用这三分钟把领带重新打了一遍。;
+:然后，门开了。;
+
+:你和陈薇并肩走进会议室。;
+:长桌两侧坐满了董事。;
+:有人翻文件，有人看手机，有人喝水。;
+:但他们的眼睛都在看你。;
+:像一群安静的观众，等着一场注定有人流血的戏。;
+:正对门口的主位上，董事长面无表情地翻着文件。;
+
+:（所有人都在看我们。）;
+:（像是在看两个被押上审判席的人。）;
+
+changeFigure:chairman_suit.png;
+
+:角落里，市场部经理老刘翘着二郎腿，嘴角挂着一丝得意。;
+
+:（老刘那表情...恨不得把"我赢了"写在脸上。）;
+
+董事长:陈总，李总监，请坐。;
+
+:你们在长桌末端坐下。;
+
+董事长:关于举报的事，我想听听你们的解释。;
+
+changeFigure:none;
+changeFigure:chenwei_suit_determined.png -left;
+
+:陈薇站起身，语气平稳。;
+
+陈薇:各位董事，我承认，我和李昂在交往。;
+
+:会议室里响起一片窃窃私语。;
+
+陈薇:但我要说明几件事。;
+陈薇:第一，我们的关系没有影响任何工作决策。;
+陈薇:第二，李昂入职以来的所有项目成果，这里有完整的数据报告。;
+
+:她打开笔记本电脑，将李昂的业绩数据投影到屏幕上。;
+
+陈薇:季度KPI超额完成127%，客户满意度评分全公司第一...;
+陈薇:这些数字不会说谎。;
+
+:董事们交头接耳，有人点头。;
+
+:老刘坐不住了。;
+
+changeFigure:laoliu_smug.png -right;
+老刘:陈总说得好听，那照片呢？;
+老刘:九楼会议室的照片？这叫没有不正当关系？;
+
+:他站起来，把几张打印的照片拍在桌上。;
+
+; 震惊 —— 照片拍在桌上的冲击
+setAnimation:shock-zoom -target=bg-main;
+
+changeBg:boardroom.png -transform={"glitchFilm":1,"rgbFilm":1,"brightness":0.8};
+
+:（来了...）;
+
+:所有人的目光落在你身上。;
+
+:陈薇也看向你。;
+
+:（她的眼神在说：交给你了。）;
+
+; 选择分支
+changeFigure:none -left;
+changeFigure:none -right;
+choose:那些照片只能证明我们在加班讨论工作，被恶意解读了:board_choice1|🔥我想问问刘经理，您是怎么拿到保安的照片的？:board_choice2|各位董事，我承认我爱她。但我的工作成果放在这里，请用数据说话:board_choice3;
+
+; ===== 选择1：沉稳反驳 =====
+label:board_choice1;
+
+changeBg:boardroom.png -transform={};
+
+你:各位董事，这些照片拍摄的时间是周五晚上十点。;
+你:那个时间，我们确实在九楼会议室。;
+你:因为周一有客户汇报，我们在加班对方案。;
+
+:你指了指投影屏幕。;
+
+你:会议室的门禁记录、我的加班申请单，都可以调取核实。;
+
+:董事长点了点头。;
+
+董事长:有道理。照片本身不能说明什么问题。;
+
+:老刘的表情僵住了。;
+
+老刘:可是...;
+
+董事长:刘经理，先坐下。;
+
+; 数值变化
+setVar:reputation=(reputation)+10;
+setVar:sanity=(sanity)+10;
+
+jumpLabel:board_converge;
+
+; ===== 选择2：反将一军 =====
+label:board_choice2;
+
+changeBg:boardroom.png -transform={};
+
+:你站起来，直视老刘。;
+
+你:刘经理，我有个问题。;
+
+老刘:你说。;
+
+你:这些照片是保安监控拍的。;
+你:保安已经辞职了，对吧？;
+
+:老刘的笑容僵了一瞬。;
+
+你:那么问题来了——您是怎么拿到这些照片的？;
+你:买通在职保安偷拍公司高管，这个行为...合法吗？;
+
+:会议室突然安静了。;
+
+:然后，窃窃私语声爆发了。;
+
+:老刘的脸色从红变白。;
+
+董事长:刘经理，这个问题你怎么解释？;
+
+老刘:我...这是别人给我的...我...;
+
+:他的声音越来越小。;
+
+:（一句话，就把老刘说破防了。）;
+:（我都没想到这么好使。）;
+
+; 数值变化
+setVar:reputation=(reputation)+15;
+setVar:affection=(affection)+10;
+setVar:danger=(danger)-10;
+
+; 成就
+intro:🏆 成就解锁：反杀|用一句话让老刘当场社死 -fontSize=large -backgroundColor=rgba(0,0,0,0.9) -fontColor=rgba(255,69,0,1) -hold;
+
+jumpLabel:board_converge;
+
+; ===== 选择3：坦荡表白 =====
+label:board_choice3;
+
+changeBg:boardroom.png -transform={};
+
+:你站起来，环顾会议室。;
+
+你:各位董事，我不想狡辩。;
+你:我承认，我爱她。;
+
+:会议室一片哗然。;
+
+你:但我想请各位看一组数据。;
+
+:你走到投影屏幕前，翻到业绩对比页面。;
+
+你:这是我入职以来每个月的项目数据。;
+你:请用数据说话——我的工作成果，配不配得上这个职位。;
+
+:董事们交换着眼神。;
+
+:桌子底下，一只温暖的手悄悄握住了你的。;
+
+:（陈薇的手在发抖。）;
+:（但她握得很紧。）;
+
+; 数值变化
+setVar:affection=(affection)+15;
+setVar:reputation=(reputation)+5;
+
+jumpLabel:board_converge;
+
+; ===== 汇合点 =====
+label:board_converge;
+
+changeFigure:none -left;
+changeFigure:chairman_suit.png;
+
+:董事长合上文件夹。;
+
+董事长:今天的情况我了解了。;
+董事长:这件事涉及公司治理和个人关系，不能草率下结论。;
+董事长:我会安排独立调查，一周内给出结果。;
+董事长:在此期间，相关人员各司其职，不得干扰调查。;
+
+:他看了一眼老刘。;
+
+董事长:所有人，都一样。;
+
+:老刘低下了头。;
+
+:散会。;
+
+changeFigure:none;
+changeFigure:none -right;
+
+; 走廊
+changeBg:corridor.png;
+bgm:gentle_moment.mp3;
+
+:走出会议室，走廊里只剩你们两个人。;
+
+changeFigure:chenwei_suit_gentle.png -left;
+
+:陈薇的脚步慢了下来。;
+
+陈薇:你刚才...太帅了。;
+
+:她的声音很轻，带着一点鼻音。;
+
+:（她是不是...快哭了？）;
+
+陈薇:我本来准备了很多应对方案...;
+陈薇:结果你一句话就把局面稳住了。;
+
+你:那是因为你先把数据摆出来了。;
+
+陈薇:少来...;
+
+:她轻轻靠了一下你的肩膀。;
+:只是一瞬间，然后她又恢复了CEO的姿态。;
+
+陈薇:走吧，回去上班。;
+陈薇:...今晚请你吃饭。;
+
+:（不管结果如何，至少这一刻——）;
+:（我没有让她一个人扛。）;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch6_ending_router.txt;

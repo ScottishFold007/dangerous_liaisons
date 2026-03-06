@@ -1,0 +1,59 @@
+; 序章：冷漠性格分支
+changeBg:bar_night.png -next;
+bgm:jazz_bar_melancholy.mp3;
+
+:你转过头去，不想和任何人说话。;
+:今晚，你只想一个人静静。;
+
+:但酒精让你的思绪越来越混乱。;
+:五年的努力，三个成功的项目，无数个加班的夜晚...;
+:都变成了一纸通知。;
+
+:（这个世界，真的有公平吗？）;
+
+playEffect:glass_break.wav;
+
+:就在这时，旁边传来玻璃杯摔碎的声音。;
+:你转头看去，那个女人的酒杯掉在了地上。;
+:她趴在吧台上，肩膀微微颤抖。;
+
+changeFigure:bartender_uniform_professional.png -right;
+调酒师:小姐，您还好吗？;
+
+:她没有回答，只是摇了摇头。;
+:调酒师看向你，眼神里带着请求。;
+
+调酒师:先生，能帮忙照看一下她吗？我去拿清洁工具。;
+
+:你犹豫了一下。;
+
+:（我自己都一团糟，怎么照顾别人？）;
+:（但...她看起来比我更糟。）;
+
+:你走了过去，坐在她旁边。;
+
+你:你还好吗？;
+
+changeFigure:chenwei_casual_crying.png -left;
+
+:她抬起头，眼眶有些红。;
+
+陈薇:不好。一点都不好。;
+
+:她的声音很低，带着一种压抑的情绪。;
+
+陈薇:你呢？你看起来也不太好。;
+你:失业了。;
+陈薇:那我们是同病相怜。;
+
+:她苦笑了一下。;
+
+陈薇:要不要一起喝？至少，今晚不用一个人。;
+
+setVar:personality=cold;
+setVar:sanity=(sanity)+3;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:prologue_conversation.txt;

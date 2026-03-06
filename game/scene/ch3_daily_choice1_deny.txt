@@ -1,0 +1,30 @@
+; 第三章 - 日常选择1：否认
+changeBg:office_desk.png -next;
+bgm:calm_office.mp3;
+
+你:还好，正常的上下级关系。;
+
+changeFigure:xiaowang_staff_calm.png -left;
+小王:哦...我就是好奇。因为陈总很少亲自带新人。;
+
+你:可能是因为这个项目比较重要吧。;
+
+小王:也是。;
+
+:他似乎接受了这个解释。;
+
+小王:那我不打扰您了。;
+
+:他离开了。;
+:但你知道，公司里已经有人在注意你和陈薇的关系了。;
+
+; 数值变化
+setVar:danger=(danger)+15;
+setVar:sanity=(sanity)+10;
+; 边界检查
+setVar:danger=100 -when=danger>100;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:ch3_daily_scene2.txt;

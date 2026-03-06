@@ -1,0 +1,63 @@
+; 隐藏结局：权力棋子
+changeBg:black.png -next;
+bgm:陈楚生-有没有人告诉你.mp3;
+unlockBgm:陈楚生-有没有人告诉你.mp3 -name=有没有人告诉你 -series=结局;
+
+; 结局标题
+intro:【隐藏结局：权力棋子】 -fontSize=large -backgroundColor=rgba(0,0,0,1) -fontColor=rgba(138,43,226,1) -hold;
+
+changeBg:office_top.png -next;
+
+:老刘被抓了。;
+:贪污、受贿、挪用公款...罪名一条条列出来。;
+:他被判了十年。;
+
+:董事会对陈薇的调查不了了之。;
+:因为举报人自己出了更大的问题。;
+
+:你站在陈薇的办公室里，看着楼下的城市。;
+
+changeFigure:chenwei_suit_cold_smile.png -left;
+陈薇:感觉怎么样？;
+
+你:有点...不真实。;
+
+陈薇:这就是权力游戏。;
+
+:她走到你身边。;
+
+陈薇:李昂，你知道吗？从第一天见到你，我就知道你和别人不一样。;
+
+你:什么意思？;
+
+陈薇:你有野心，有能力，也有...黑暗面。;
+陈薇:所以我选择了你。;
+陈薇:不是因为那一夜，而是因为...我们是同类人。;
+
+:你突然明白了。;
+:从一开始，这就是一场测试。;
+:她在测试你，是否能成为她的伙伴。;
+
+; 时间跳跃
+changeBg:black.png -next;
+intro:一年后，你们结婚了。|你们成为了商界最令人畏惧的夫妻。|权力、金钱、地位，你们拥有一切。 -hold;
+
+:但有时候深夜，你会想：;
+:我是真的爱她，还是爱上了权力的感觉？;
+:;
+:你不知道答案。;
+:也许，你永远不会知道。;
+
+; 结局文字
+changeBg:ending_hidden.png -next -transform={"oldFilm":1,"saturation":0.5};
+unlockCg:ending_hidden.png -name=权力棋子 -series=8;
+
+; 结局落幕 —— 黑暗结局的电影感
+setAnimation:ending-cinematic -target=bg-main -next;
+
+intro:【隐藏结局：权力棋子】|你以为自己在追求爱情，|其实你只是她权力游戏中的一枚棋子。|但讽刺的是，你并不介意。|因为你们确实相爱，|只是这份爱，建立在权力和算计之上。 -fontSize=medium -backgroundColor=rgba(0,0,0,0.9) -fontColor=rgba(255,255,255,1) -hold;
+
+; 统计信息
+intro:完成度：100%|解锁：隐藏结局|成就：黑暗伙伴|警告：这不是一个真正的好结局 -fontSize=medium -backgroundColor=rgba(0,0,0,0.9) -fontColor=rgba(138,43,226,1) -hold;
+pixiInit;
+end;

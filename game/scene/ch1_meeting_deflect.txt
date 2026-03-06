@@ -1,0 +1,33 @@
+; 第一章：转移焦点
+changeBg:meeting_room.png;
+bgm:presentation_theme.mp3;
+
+你:这个数据是保守估计，实际市场潜力更大。;
+
+changeFigure:chenwei_suit_displeased.png -left;
+陈薇:李总监，我问的是数据来源，不是市场潜力。;
+
+:你的转移话题被她一眼看穿。;
+:市场部经理也有些不满。;
+
+changeFigure:marketing_manager_suit.png -right;
+市场部经理:数据来源很重要，这关系到方案的可信度。;
+
+陈薇:李总监，请正面回答问题。;
+
+:你意识到自己搬起石头砸了自己的脚。;
+
+你:抱歉，数据确实需要更新。我会尽快补充。;
+
+陈薇:希望下次能更充分准备。散会。;
+
+; 数值变化
+setVar:affection=(affection)-8;
+setVar:reputation=(reputation)-15;
+setVar:sanity=(sanity)-10;
+setVar:danger=(danger)+5;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch1_meeting_aftermath.txt;

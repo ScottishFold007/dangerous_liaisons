@@ -1,0 +1,25 @@
+; 第六章 - 拒绝黑暗
+changeBg:office_ceo.png -next;
+bgm:confrontation_climax.mp3;
+
+你:这样不对...我们不应该用这种手段。;
+
+changeFigure:chenwei_casual_disappointed.png -left;
+陈薇:你让我失望了。;
+
+:她放下电话。;
+
+陈薇:我以为你能理解我。;
+
+你:陈薇，我爱你，但我不能...;
+
+陈薇:够了。;
+
+:她转身，背对着你。;
+
+陈薇:你走吧。我们不是一路人。;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:END_BE2_BREAKUP.txt;

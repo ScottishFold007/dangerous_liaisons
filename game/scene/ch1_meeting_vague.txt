@@ -1,0 +1,34 @@
+; 第一章：模糊回答
+changeBg:meeting_room.png;
+bgm:presentation_theme.mp3;
+
+你:基于行业报告和竞品分析。;
+
+changeFigure:chenwei_suit_serious.png -left;
+陈薇:哪份报告？哪个竞品？;
+
+:她的追问让你有些慌乱。;
+:市场部经理也开口了。;
+
+changeFigure:marketing_manager_suit.png -right;
+市场部经理:李总监，能具体说说数据来源吗？;
+
+:你感觉到所有人的目光都在审视你。;
+
+你:是...三个月前的行业报告。时间确实有些久了。;
+
+陈薇:三个月前的数据，在互联网行业已经过时了。;
+
+:她的语气很冷。;
+
+陈薇:下次，请用最新的数据。;
+
+; 数值变化
+setVar:reputation=(reputation)-10;
+setVar:affection=(affection)-5;
+setVar:sanity=(sanity)-5;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch1_meeting_aftermath.txt;

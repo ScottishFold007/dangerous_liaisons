@@ -1,0 +1,40 @@
+; 第三章 - 日常继续
+changeBg:office_corridor.png;
+bgm:daily_work.mp3;
+
+:电梯的插曲过后，你回到办公室。;
+:心跳还没有完全平复。;
+
+; suspected时：回办公室路上感受到异样目光
+:（走廊里好像有人在看我...是错觉吗？） -when=suspected==1;
+
+; impulsive：之前的冲动行为被议论
+:（路过茶水间，听到有人小声说"就是那个..."，声音随即消失了。） -when=impulsive==1;
+
+:接下来的两周，你和陈薇的关系在悄悄发展。;
+
+:每天晚上，你会收到她的短信。;
+:有时是工作，有时是简单的问候。;
+
+; 短信示例
+miniAvatar:chenwei_avatar.png -left;
+陈薇（短信）:今天辛苦了。;
+陈薇（短信）:记得吃晚饭。;
+陈薇（短信）:晚安。;
+miniAvatar:none;
+
+:简短的话语，但让你感觉到她的关心。;
+
+:周末，你去了她家。;
+:那是一套位于市中心的高层公寓，装修简约但精致。;
+:她亲自做了晚饭——虽然手艺一般，但你能感受到她的用心。;
+
+:那一晚，你们聊了很多。;
+:关于工作，关于生活，关于过去。;
+:你第一次了解到，她并不是表面看起来那么强大。;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+; 老刘主动找你聊天
+changeScene:ch3_laoliu_coffee.txt;

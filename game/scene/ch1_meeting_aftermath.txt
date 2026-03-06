@@ -1,0 +1,19 @@
+; 第一章：会议后
+
+changeBg:meeting_room.png -next;
+bgm:aftermath_theme.mp3;
+
+:会议结束了。;
+:同事们陆续离开，有人对你点头微笑，有人面无表情。;
+:你收拾好资料，准备离开。;
+
+changeFigure:chenwei_suit_calm.png -left;
+陈薇:李总监，等一下。;
+
+:你的心一紧。;
+:其他人都走了，会议室里又只剩你们两人。;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:ch1_end.txt;

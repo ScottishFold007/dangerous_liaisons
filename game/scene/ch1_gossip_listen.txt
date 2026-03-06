@@ -1,0 +1,29 @@
+; 第一章：偷听八卦
+changeBg:office_room.png -next;
+bgm:work_busy.mp3;
+
+:你放轻脚步，靠近门边。;
+
+changeFigure:colleague_a_gossip.png -left -next;
+同事A:我听说啊，上一个项目总监和陈总关系...不一般。;
+changeFigure:colleague_b_gossip.png -right -next;
+同事B:真的假的？;
+同事A:后来不知道怎么回事，两人闹翻了。那个总监第二天就被开除了。;
+同事A:而且我听说，那个项目本身就有问题。具体什么问题我也不清楚...;
+同事B:天哪...所以陈总...;
+同事A:嘘，别说了。反正新来的这个，最好小心点。;
+
+:突然，身后传来声音。;
+
+changeFigure:none -left -next;
+changeFigure:none -right -next;
+changeFigure:chenwei_suit_displeased.png -next;
+陈薇:李总监，在这里做什么？;
+
+playEffect:shock_sound.wav;
+
+:你猛地转身，陈薇就站在你身后，距离不到一米。;
+:她什么时候出现的？她听到你在偷听了吗？;
+
+changeFigure:none -next;
+choose:我在等人:ch1_gossip_lie.txt|我...我马上去会议室:ch1_gossip_avoid.txt|陈总，上一任项目总监发生了什么？:ch1_gossip_ask.txt;

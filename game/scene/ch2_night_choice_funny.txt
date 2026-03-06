@@ -1,0 +1,46 @@
+; 第二章 - 夜晚选择：😂外卖暖男
+changeBg:office_night.png -next;
+bgm:night_work.mp3;
+
+你:因为我怕自己忍不住...给您点外卖。;
+
+changeFigure:chenwei_suit_stunned.png -left;
+
+:陈薇愣住了。;
+
+陈薇:什么？;
+
+你:您看起来很累，肯定没吃晚饭。我怕忍不住关心您。;
+
+:她盯着你看了几秒，然后...;
+
+playEffect:laugh.mp3;
+
+changeFigure:chenwei_suit_laughing.png -left;
+
+:她笑了。;
+:真的笑了，不是职业化的微笑，而是发自内心的笑。;
+
+陈薇:李昂，你真是...;
+陈薇:我以为你会说什么深情的话，结果是外卖？;
+
+你:深情的话我不会说，但外卖我会点。;
+
+:她笑得更厉害了。;
+
+陈薇:好吧，那你点吧。我确实饿了。;
+
+你:想吃什么？;
+
+陈薇:随便，你决定。;
+
+:你拿出手机，点了两份夜宵。;
+
+intro:30分钟后...;
+
+; 场景继续
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:ch2_night_funny_continue.txt;

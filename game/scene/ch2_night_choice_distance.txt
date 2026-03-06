@@ -1,0 +1,35 @@
+; 第二章 - 夜晚选择：保持距离
+changeBg:office_night.png;
+bgm:night_work.mp3;
+
+你:谢谢陈总的认可。;
+你:我会继续努力的。;
+
+:你刻意保持了礼貌的距离。;
+:陈薇的笑容淡了一些。;
+
+changeFigure:chenwei_suit_calm.png -left;
+陈薇:嗯。那你继续忙吧。;
+陈薇:我先回去了。;
+
+:她站起身，拿起自己的咖啡。;
+:走了几步，又回头看了你一眼。;
+
+陈薇:李总监，有时候...;
+陈薇:机会不会一直等着你的。;
+
+:她离开了。;
+:办公室里只剩下你一个人。;
+
+:（她这话是什么意思？）;
+:（我是不是...错过了什么？）;
+
+; 数值变化
+setVar:affection=(affection)-10;
+setVar:sanity=(sanity)+15;
+setVar:danger=(danger)-10;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch2_end.txt;

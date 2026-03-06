@@ -1,0 +1,33 @@
+; 第一章：试探态度
+changeBg:office_corridor.png;
+bgm:none;
+
+你:我们...之前见过吗？;
+
+:空气凝固了一秒。;
+:王经理疑惑地看看你，又看看陈总。;
+
+changeFigure:chenwei_suit_cold_smile.png -left;
+陈薇:李总监记性不太好。不过没关系，我们以后有的是时间...熟悉。;
+
+:她的笑容很职业，但眼神里闪过一丝不悦。;
+
+changeFigure:wang_manager_smile.png -right;
+王经理:哈哈，李总监可能太紧张了。陈总，那我先...;
+陈薇:你先去忙。我带李总监去办公室。;
+
+:王经理离开后，她的笑容消失了。;
+
+陈薇:你在试探我？;
+
+:她的语气很冷。;
+
+setVar:affection=(affection)-8;
+setVar:sanity=(sanity)-5;
+setVar:danger=(danger)+15;
+setVar:reputation=(reputation)-3;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch1_corridor_alone.txt;

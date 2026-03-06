@@ -1,0 +1,68 @@
+; 第一章：结束
+
+changeBg:meeting_room.png;
+bgm:intimate_tension.mp3;
+unlockBgm:intimate_tension.mp3 -name=暗流涌动 -series=暗涌;
+
+changeFigure:chenwei_suit_thoughtful.png;
+
+:她走到窗边，背对着你。;
+
+陈薇:第一次会议，压力大吗？;
+
+:她的语气变得柔和了。;
+
+你:还好。;
+
+陈薇:你不用紧张。我知道你有能力，否则不会录用你。;
+
+:她转身。;
+
+陈薇:但是，李昂...;
+
+:她又直接叫了你的名字。;
+
+陈薇:在这个公司，能力只是基础。更重要的是...懂规矩。;
+
+你:什么规矩？;
+
+陈薇:知道什么该做，什么不该做。知道什么该说，什么不该说。;
+
+:她看着你，眼神复杂。;
+
+陈薇:比如...那晚的事，就不该被任何人知道。;
+
+:她停顿了一下。;
+
+陈薇:今天表现不错。继续保持。;
+
+:她转身离开，走到门口时又停了下来。;
+
+陈薇:对了，今晚有空吗？;
+
+:你的心跳加速。;
+
+陈薇:我想和你...聊聊工作。;
+
+:她说"聊聊工作"，但眼神里的意思你懂。;
+
+intro:第一章：意外重逢 完|第二章：职场试炼 即将开始;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+
+; 边界保护 - 确保所有变量在合法范围内
+setVar:affection=0 -when=affection<0;
+setVar:affection=100 -when=affection>100;
+setVar:sanity=0 -when=sanity<0;
+setVar:sanity=100 -when=sanity>100;
+setVar:reputation=0 -when=reputation<0;
+setVar:reputation=100 -when=reputation>100;
+setVar:danger=0 -when=danger<0;
+setVar:danger=100 -when=danger>100;
+
+; 第一章结束 - 状态卡片
+intro:【第一章结束】|好感度：{affection}|理智值：{sanity}|职业声誉：{reputation}|危险指数：{danger} -fontSize=medium -backgroundColor=rgba(0,0,0,0.85) -fontColor=rgba(255,255,255,1) -hold;
+
+changeScene:ch2_start.txt;

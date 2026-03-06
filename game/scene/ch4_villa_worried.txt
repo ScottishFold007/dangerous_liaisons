@@ -1,0 +1,23 @@
+; 第四章 - 别墅：有时担心
+changeBg:villa_living_room.png;
+bgm:peaceful_weekend.mp3;
+
+你:有时候会担心...担心流言会影响你，影响我们。;
+
+changeFigure:chenwei_casual_understanding.png -left;
+陈薇:我懂。;
+
+:她握住你的手。;
+
+陈薇:我也担心。但是...;
+陈薇:李昂，我想告诉你一些事。;
+陈薇:关于我的过去，关于为什么我会这么谨慎。;
+
+; 数值变化
+setVar:affection=(affection)+10;
+setVar:sanity=(sanity)+10;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch4_villa_truth.txt;

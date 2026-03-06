@@ -1,0 +1,32 @@
+; 《救命！我睡了我老板》WebGAL 游戏脚本
+; 序章：一周前的邂逅
+
+; 初始化变量
+setVar:reputation=50;
+setVar:affection=0;
+setVar:sanity=60;
+setVar:danger=0;
+setVar:public_rel=0;
+setVar:suspected=0;
+setVar:know_secret=0;
+setVar:impulsive=0;
+setVar:confessed=0;
+setVar:personality=cautious;
+
+; 序章开始
+changeBg:black.png -next;
+bgm:bgm_title.mp3;
+unlockBgm:bgm_title.mp3 -name=命运序曲 -series=序曲;
+intro:一周前;
+
+:人生有时候就是这样。;
+:一个决定，一次偶遇，就能改变一切。;
+:如果那天晚上，我没有去那家酒吧...;
+:也许，一切都会不同。;
+
+; 跳转到酒吧场景
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:prologue_bar.txt;

@@ -1,0 +1,27 @@
+; 坏结局2：感情破裂
+pixiInit;
+pixiPerform:rain;
+changeBg:black.png -next -transform={"brightness":0.6,"saturation":0.3};
+bgm:yao_xiaotang-clouds_that_bloom.mp3;
+unlockBgm:yao_xiaotang-clouds_that_bloom.mp3 -name=会开花的云 -series=结局;
+
+
+; 结局文字
+intro:【坏结局：感情破裂】 -hold;
+
+:你离开了她的生活。;
+:也许是因为害怕，也许是因为不够勇敢。;
+
+:周一回到公司，你提交了辞职信。;
+:陈薇批准了，没有挽留。;
+
+:你们再也没有见过面。;
+
+:多年后，你偶尔会想起那个周末。;
+:想起她说"我也爱你"的样子。;
+
+:但有些选择，一旦做出，就再也回不去了。;
+
+intro:完成度：30%|解锁：BE2结局|提示：爱一个人，需要勇气。 -hold;
+pixiInit;
+end;

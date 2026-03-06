@@ -1,0 +1,43 @@
+; 第三章 - 电梯选择4：调戏
+changeBg:elevator.png;
+bgm:tension_subtle.mp3;
+
+你:陈总，您的手...碰到我了。;
+
+:她转头看你，眼神里有一丝笑意。;
+
+changeFigure:chenwei_suit_smile.png -left;
+陈薇:哦？是吗？;
+
+:她不但没有收回手，反而更靠近了一点。;
+
+陈薇:那李总监...介意吗？;
+
+:电梯显示：15楼。;
+
+你:不介意。只是...怕被监控拍到。;
+
+陈薇:聪明。;
+
+:她收回手，但嘴角带着笑。;
+
+陈薇:李总监，你越来越会说话了。;
+
+:电梯到了20楼。;
+playEffect:elevator_door.mp3;
+:门开了，她走出去，留下一句话。;
+
+陈薇:晚上有空吗？我想...继续被你"碰到"。;
+
+:（她...她在调戏我？！）;
+:（还是我在调戏她？）;
+
+; 数值变化
+setVar:affection=(affection)+15;
+setVar:sanity=(sanity)-5;
+setVar:danger=(danger)+10;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch3_daily_continue.txt;

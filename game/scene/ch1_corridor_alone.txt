@@ -1,0 +1,28 @@
+; 第一章：走廊独处
+changeBg:office_corridor.png -next;
+bgm:tension_intimate.mp3;
+
+changeFigure:chenwei_suit_serious.png -left;
+:她的高跟鞋声在空荡的走廊里回响。;
+:你跟在她身后，保持着一步的距离。;
+:能闻到她身上的香水味——和那晚一样的味道。;
+
+:她停在一扇落地窗前，看着窗外的城市景色。;
+
+陈薇:我们公司的工作强度不小。加班是常态，有时候忙起来，连家都回不了。;
+
+:她在暗示那晚的"一夜未归"吗？;
+
+陈薇:项目部尤其辛苦。上一任项目总监就是因为...压力太大，离职了。;
+
+:（上一任总监？她为什么突然提起这个？）;
+
+:她停下脚步，转过身来。;
+:距离很近，近到你能看清她眼中的复杂情绪。;
+
+陈薇:李总监，你能承受压力吗？;
+
+:这个问题，似乎不只是在问工作。;
+
+changeFigure:none -left -next;
+choose:我可以:ch1_corridor_simple.txt|取决于压力来自哪里:ch1_corridor_ambiguous.txt|上一任总监...发生了什么？:ch1_corridor_ask.txt|陈总，您离我这么近...我压力很大:ch1_corridor_flirt.txt;

@@ -1,0 +1,30 @@
+; 第三章 - 酒吧结束
+changeBg:city_night.png -next;
+bgm:night_city.mp3;
+
+:你们走出酒吧。;
+:夜风吹来，带着一丝凉意。;
+
+changeFigure:chenwei_casual_smile.png -left;
+陈薇:送我回家吗？;
+
+你:好。;
+
+:你们并肩走在街上。;
+:陈薇突然握住了你的手。;
+
+陈薇:李昂，我们说好，在公司里保持距离。;
+陈薇:但在这之外...我想做回普通的陈薇。;
+
+:她看着你。;
+
+陈薇:可以吗？;
+
+你:可以。;
+
+:她笑了，那笑容很纯粹，像个普通女孩。;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:ch3_end.txt;

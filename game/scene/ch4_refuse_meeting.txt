@@ -1,0 +1,26 @@
+; 第四章 - 拒绝会面
+changeBg:office_ceo.png;
+bgm:calm_office.mp3;
+
+; 短信回复
+miniAvatar:none;
+你（短信）:不合适，现在太危险了。;
+
+:发送后，她很久没有回复。;
+
+:十分钟后，她回复了。;
+miniAvatar:chenwei_avatar.png -left;
+陈薇（短信）:我明白了。;
+miniAvatar:none;
+
+:只有四个字，但你能感觉到她的失望。;
+
+; 数值变化
+setVar:affection=(affection)-15;
+setVar:sanity=(sanity)+10;
+setVar:danger=(danger)-10;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch4_weekend_alone.txt;

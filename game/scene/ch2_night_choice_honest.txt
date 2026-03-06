@@ -1,0 +1,42 @@
+; 第二章 - 夜晚选择：诚实回应
+changeBg:office_night.png;
+bgm:night_work.mp3;
+
+你:我也很欣赏您。;
+你:您的专业能力和领导力，都让我很佩服。;
+
+changeFigure:chenwei_suit_smile.png -left;
+陈薇:只是专业能力吗？;
+
+:她的眼神有些玩味。;
+
+你:还有...您的人格魅力。;
+
+changeFigure:chenwei_suit_gentle.png -left;
+陈薇:李昂，你知道吗...;
+陈薇:我很少在办公室待到这么晚。;
+陈薇:但今天，我想等你。;
+
+bgm:BY2_aiyaaiya.mp3;
+:她的话让你心跳加速。;
+
+你:陈总...;
+
+陈薇:叫我陈薇。;
+陈薇:至少在没有别人的时候。;
+
+:她站起身，轻轻拍了拍你的肩膀。;
+
+陈薇:早点休息。明天还要继续努力。;
+
+:她离开了，但你的心还在狂跳。;
+
+; 数值变化
+setVar:affection=(affection)+15;
+setVar:sanity=(sanity)-5;
+setVar:danger=(danger)+10;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch2_end.txt;

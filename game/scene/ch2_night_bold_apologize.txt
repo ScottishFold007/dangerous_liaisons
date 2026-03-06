@@ -1,0 +1,30 @@
+; 第二章 - 办公室大胆：怂了道歉 💀
+changeBg:office_night.png;
+bgm:night_work.mp3;
+
+你:对不起，我太冲动了...;
+
+changeFigure:chenwei_suit_disappointed.png -left;
+
+:她的眼神暗淡了。;
+
+陈薇:果然...只会说说而已。;
+
+:她转身，解锁门，离开了。;
+:留下你一个人坐在办公室里。;
+
+:（我...我刚才错过了什么？）;
+
+; 数值变化
+setVar:affection=(affection)+10;
+setVar:sanity=(sanity)+10;
+setVar:danger=(danger)-5;
+setVar:impulsive=1;
+
+; 成就提示
+intro:💀 成就解锁：嘴炮王者|说得比唱的好听 -fontSize=large -backgroundColor=rgba(0,0,0,0.9) -fontColor=rgba(255,69,0,1) -hold;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch2_end.txt;

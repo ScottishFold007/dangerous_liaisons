@@ -1,0 +1,29 @@
+; 第三章 - 故事：承诺
+changeBg:bar_night.png;
+bgm:dark_theme.mp3;
+
+你:我不是张明。我不会伤害你。;
+
+:你不知道该怎么证明。;
+
+changeFigure:chenwei_casual_complex.png -left;
+陈薇:算了，我不该问这个。;
+
+:她苦笑了一下。;
+
+陈薇:承诺这种东西，太廉价了。;
+陈薇:张明也说过同样的话。;
+
+:她站起身。;
+
+陈薇:时间会证明一切。;
+
+; 数值变化
+setVar:affection=(affection)+10;
+setVar:sanity=(sanity)-5;
+setVar:danger=(danger)+10;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch3_bar_end.txt;

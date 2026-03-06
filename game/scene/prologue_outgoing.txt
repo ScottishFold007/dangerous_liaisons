@@ -1,0 +1,30 @@
+; 序章：外向性格分支
+changeBg:bar_night.png -next;
+bgm:jazz_bar_melancholy.mp3;
+
+changeFigure:chenwei_casual_surprised.png -left;
+
+你:不好意思，能请你喝一杯吗？;
+
+:她转过头，打量了你几秒。;
+
+陈薇:为什么？;
+你:因为你看起来和我一样，需要喝一杯。;
+
+:她轻笑了一声，那笑容里有些自嘲。;
+
+陈薇:你看得出来？;
+你:失意的人，总能认出彼此。;
+
+:她沉默了片刻，然后点了点头。;
+
+陈薇:好。那就一起喝吧。;
+
+setVar:personality=outgoing;
+setVar:sanity=(sanity)-5;
+setVar:affection=(affection)+3;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:prologue_conversation.txt;

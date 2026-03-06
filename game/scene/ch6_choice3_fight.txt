@@ -1,0 +1,36 @@
+; 第六章 - 选择3：反击
+changeBg:office_ceo.png -next;
+bgm:crisis_theme.mp3;
+
+你:反击，找出幕后黑手。;
+
+changeFigure:chenwei_suit_dangerous_smile.png -left;
+
+:她的眼神变得锐利。;
+
+陈薇:我就知道你会这么选。;
+
+你:我们不能被动挨打。;
+
+陈薇:对。最好的防守就是进攻。;
+
+:她打开电脑，调出一份文件。;
+
+陈薇:老刘这些年，手脚不干净。;
+陈薇:我一直留着证据，就是为了这一天。;
+
+你:那我们...;
+
+陈薇:我们先发制人。;
+陈薇:在董事会调查我之前，先揭发他。;
+
+:她看着你。;
+
+陈薇:李昂，这条路...可能会让你变得和我一样。;
+陈薇:冷酷、算计、不择手段。;
+陈薇:你确定要走这条路吗？;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:ch6_fight_investigation.txt;

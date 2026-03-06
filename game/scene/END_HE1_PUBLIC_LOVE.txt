@@ -1,0 +1,81 @@
+; 完美结局1：职场爱情双赢
+pixiInit;
+pixiPerform:cherryBlossoms;
+changeBg:black.png -next;
+bgm:triumph_theme.mp3;
+unlockBgm:triumph_theme.mp3 -name=凯旋之歌 -series=结局;
+
+; 结局标题
+intro:【完美结局：职场爱情双赢】 -fontSize=large -backgroundColor=rgba(0,0,0,1) -fontColor=rgba(255,215,0,1) -hold;
+
+changeBg:meeting_room.png -next;
+
+:下午三点，董事会会议。;
+:所有董事都在，气氛严肃。;
+
+changeFigure:chairman_suit.png -next;
+董事长:陈总，有人举报你和下属李昂存在不正当关系。;
+董事长:你有什么要说的？;
+
+:陈薇站起身，看向你。;
+:你也站起来，走到她身边。;
+
+changeFigure:chenwei_suit_determined.png -left -next;
+陈薇:各位董事，我承认，李昂和我确实在交往。;
+
+:会议室里一片哗然。;
+
+陈薇:但这是在他入职之前就开始的。;
+陈薇:我们的关系不影响工作，也没有任何利益输送。;
+
+你:各位董事，我和陈总的关系是真心的，不是利用，也不是交易。;
+你:其实从第二周开始，我就已经跟她说过了。 -when=confessed==1;
+
+; 时间跳跃
+changeBg:black.png -next;
+intro:一个月后... -hold;
+
+; 叙述
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeBg:cafe.png -next;
+bgm:0120.苏公堤 杨一歌.mp3;
+unlockBgm:0120.苏公堤 杨一歌.mp3 -name=苏公堤 -series=结局;
+
+:调查结束了。;
+:董事会确认，你和陈薇的关系没有违反公司规定。;
+:但陈薇还是受到了警告，你也被调到了其他部门。;
+
+:三个月后。;
+:你和陈薇在公司楼下的咖啡厅见面。;
+
+changeFigure:chenwei_casual_smile.png -left -next;
+陈薇:还适应新部门吗？;
+
+你:还好。虽然不能每天见面，但至少不用偷偷摸摸了。;
+
+陈薇:周末来我家吃饭？;
+
+你:好。;
+
+:阳光透过玻璃窗洒在你们身上。;
+:这一次，你们可以光明正大地牵手了。;
+
+; 时间跳跃
+changeBg:black.png -next;
+intro:一年后... -hold;
+
+; 结局总结
+changeBg:ending_he1.png -next -transform={"godrayFilm":1,"brightness":1.1};
+unlockCg:ending_he1.png -name=职场爱情双赢 -series=7;
+
+; 结局落幕 —— 电影感回顾
+setAnimation:ending-cinematic -target=bg-main -next;
+
+intro:你们公开了关系，虽然经历了风波，但最终得到了认可。|陈薇依然是CEO，你在新部门也做出了成绩。|一年后，你们订婚了。|有些爱情，值得为之冒险。 -fontSize=medium -backgroundColor=rgba(0,0,0,0.9) -fontColor=rgba(255,255,255,1) -hold;
+
+; 统计信息
+intro:完成度：100%|解锁：HE1结局|成就：真爱无畏 -fontSize=medium -backgroundColor=rgba(0,0,0,0.9) -fontColor=rgba(255,215,0,1) -hold;
+pixiInit;
+end;

@@ -1,0 +1,43 @@
+; 第四章 - 会议室：躲藏
+changeBg:meeting_room_dark.png;
+bgm:intimate_tension.mp3;
+
+:你们慌乱地躲到桌子下面。;
+
+playEffect:door_open.mp3;
+
+changeFigure:security_uniform_serious.png -left;
+保安:陈总？;
+
+:保安看到空荡荡的会议室，有些疑惑。;
+
+保安:奇怪，明明看到灯亮着...;
+
+:他走进来，四处看了看。;
+:你和陈薇躲在桌子下，大气都不敢出。;
+:保安走到桌子旁边...;
+
+playEffect:heartbeat_fast.mp3;
+
+:就在这时，他的对讲机响了。;
+
+对讲机（声音）:老张，一楼有情况，快下来。;
+
+保安:好，马上到。;
+
+:他匆匆离开了。;
+:你们从桌子下爬出来，都吓出了一身冷汗。;
+
+changeFigure:chenwei_casual_shirt_panicked.png -left;
+陈薇:天哪...;
+陈薇:我们太冒险了。;
+
+; 数值变化
+setVar:affection=(affection)+5;
+setVar:danger=(danger)+30;
+setVar:sanity=(sanity)-10;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch4_decision_talk.txt;

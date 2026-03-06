@@ -1,0 +1,29 @@
+; 第三章 - 日常场景2：陈薇的邀约
+changeBg:office_evening.png;
+bgm:evening_theme.mp3;
+
+:小王离开后，你一直心神不宁。;
+:流言的事，要不要告诉陈薇？;
+
+; suspected时：更加焦虑
+:（如果她知道别人在背后议论我们...她会怎么想？） -when=suspected==1;
+:（也许我应该先想办法把流言压下去。） -when=suspected==1;
+
+playEffect:phone_ring.wav;
+:正想着，手机震动了。;
+:是陈薇的短信。;
+
+; 短信
+miniAvatar:chenwei_avatar.png -left;
+陈薇（短信）:今晚有空吗？;
+陈薇（短信）:想和你聊聊。;
+陈薇（短信）:——陈薇;
+miniAvatar:none;
+
+:你看着这条短信，犹豫了。;
+
+:（现在这个时候，见面合适吗？）;
+:（但如果不去，她会怎么想？）;
+
+; 选择分支
+choose:好，几点？在哪？:ch3_scene2_accept.txt|抱歉，今晚有事:ch3_scene2_refuse.txt|陈总，公司里有些流言...:ch3_scene2_tell.txt;

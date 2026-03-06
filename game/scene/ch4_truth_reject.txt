@@ -1,0 +1,37 @@
+; 第四章 - 真相：拒绝
+changeBg:villa_living_room.png;
+bgm:revelation_theme.mp3;
+
+你:我不能接受这个。;
+
+changeFigure:chenwei_casual_cold.png -left;
+
+:她的表情变得冰冷。;
+
+陈薇:我明白了。;
+
+:她站起身，走到窗边。;
+
+陈薇:那我们...就到此为止吧。;
+
+你:陈薇...;
+
+陈薇:不用说了。;
+陈薇:我理解。每个人都有自己的底线。;
+
+:她转过身。;
+
+陈薇:李昂，谢谢你这段时间的陪伴。;
+陈薇:但从今天起，我们还是保持上下级关系吧。;
+
+; 数值变化
+setVar:affection=(affection)-40;
+setVar:know_secret=1;
+setVar:sanity=(sanity)+20;
+
+:这可能是一个结局的开始...;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:END_BE2_BREAKUP.txt;

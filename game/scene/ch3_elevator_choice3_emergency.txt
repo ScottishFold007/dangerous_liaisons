@@ -1,0 +1,35 @@
+; 第三章 - 电梯选择3：按紧急按钮 🔥💀
+changeBg:elevator.png -next;
+bgm:tension_subtle.mp3;
+playEffect:emergency_button.mp3;
+
+:你按下了紧急停止按钮。;
+:电梯突然停住了。;
+
+playEffect:elevator_stop.mp3;
+
+; 电梯急停 —— 画面震动
+setAnimation:elevator-stop -target=bg-main -next;
+
+changeBg:elevator.png -transform={"brightness":0.6,"contrast":1.3} -next;
+
+changeFigure:chenwei_suit_shocked.png -left;
+陈薇:你...你在做什么？！;
+
+你:我想...多和您待一会儿。;
+
+changeFigure:chenwei_suit_angry.png -left;
+陈薇:你疯了吗？！这里有监控！;
+
+:（完了...我真的疯了...）;
+
+:但她没有立刻按恢复按钮。;
+:她盯着你，眼神复杂。;
+
+changeFigure:chenwei_suit_serious.png -left;
+陈薇:李昂，你知道这意味着什么吗？;
+
+; 选择分支
+changeBg:elevator.png -transform={} -next;
+changeFigure:none -left -next;
+choose:对不起，我太冲动了:ch3_elevator_emergency_apologize.txt|我知道。但我想吻你:ch3_elevator_emergency_kiss.txt|陈总，我很想你:ch3_elevator_emergency_confess.txt;

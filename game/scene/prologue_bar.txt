@@ -1,0 +1,55 @@
+; 序章：酒吧场景
+
+changeBg:bar_night.png -next -transform={"brightness":0.85,"saturation":0.8};
+unlockCg:bar_night.png -name=酒吧邂逅 -series=1;
+bgm:jazz_bar_melancholy.mp3;
+unlockBgm:jazz_bar_melancholy.mp3 -name=酒吧忧思 -series=邂逅;
+
+:这是市中心一家不起眼的酒吧。;
+:没有喧闹的人群，只有慵懒的爵士乐和昏黄的灯光。;
+:你坐在吧台前，面前是第三杯威士忌。;
+
+:（五年...五年的努力，就这么没了。）;
+
+:今天下午，你收到了公司倒闭的通知。;
+:作为项目经理，你带领团队做了三个成功的项目。;
+:但这些都不重要了。;
+:公司没了，工作没了，未来也变得模糊不清。;
+
+changeFigure:bartender_uniform_professional.png -right;
+
+调酒师:看起来心情不太好？;
+你:失业了。;
+调酒师:那确实该喝一杯。这杯算我请的。;
+
+:他又倒了一杯威士忌，推到你面前。;
+
+调酒师:别太难过。这个城市机会很多，你还年轻。;
+你:谢谢。;
+changeFigure:none -right -next;
+:你端起酒杯，一饮而尽。;
+:酒精的灼热感从喉咙蔓延到胃里，但并没有让你好受一点。;
+
+
+playEffect:glass_clink.wav;
+
+; 酒精效果 —— 画面微微摇晃
+setAnimation:drunk-sway -target=bg-main -next;
+
+:就在这时，吧台另一边传来声音。;
+
+陌生女人:再来一杯。;
+
+changeFigure:chenwei_casual_tired.png -left;
+
+:你下意识地看了过去。;
+:那是一个女人。;
+:三十岁左右，穿着黑色连衣裙，气质出众。;
+:但她的眼神里有一种疲惫和空洞，和周围的环境格格不入。;
+:她独自坐在那里，面前已经有三个空酒杯。;
+
+:（她看起来...和我一样糟糕。）;
+
+; 性格选择分支
+changeFigure:none -left -next;
+choose:不好意思，能请你喝一杯吗？:prologue_outgoing.txt|继续喝自己的酒，等她先开口:prologue_cautious.txt|转过头去，不想和任何人说话:prologue_cold.txt;

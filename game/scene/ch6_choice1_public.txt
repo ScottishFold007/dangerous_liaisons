@@ -1,0 +1,28 @@
+; 第六章 - 选择1：public_rel
+changeBg:office_ceo.png;
+bgm:crisis_theme.mp3;
+
+你:public_rel，我们一起面对。;
+
+changeFigure:chenwei_suit_touched.png -left;
+
+:她的眼眶红了。;
+
+陈薇:你确定吗？;
+陈薇:这可能会毁掉你的职业生涯。;
+
+你:我确定。;
+你:我不想再躲了。;
+
+:她握住你的手。;
+
+陈薇:好。那我们就一起面对。;
+
+:她拿起电话。;
+
+陈薇:王秘书，通知董事会，我下午三点会给出解释。;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch6_public_board.txt;

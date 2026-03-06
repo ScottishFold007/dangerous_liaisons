@@ -1,0 +1,56 @@
+; 第二章 - 夜晚选择：🔥超大胆回答（即死）
+changeBg:office_night.png -next;
+bgm:none;
+
+你:因为每次见到您，我都想把您按在办公桌上。;
+
+:空气凝固了。;
+:你突然意识到自己说了什么。;
+
+:（我...我刚才说了什么？！）;
+
+changeFigure:chenwei_suit_shocked.png -left -next;
+
+:陈薇的表情从震惊变成了愤怒。;
+:她站起身，脸色铁青。;
+
+陈薇:你说什么？;
+
+:她的声音很冷，像冰一样。;
+
+你:我...我不是那个意思...;
+
+changeFigure:chenwei_suit_angry.png -left -next;
+
+陈薇:李昂，我以为你是个专业的人。;
+陈薇:但现在看来，我看错了。;
+
+:她走到门口，打开门。;
+
+陈薇:明天早上，去人事部办离职手续。;
+陈薇:我不想再见到你。;
+
+:她头也不回地离开了。;
+
+:你坐在椅子上，脑子一片空白。;
+:（我...我毁了一切。）;
+:（一句话，毁了一切。）;
+
+:（那天晚上的温柔，那些暧昧的时刻...）;
+:（全部，都被我亲手毁掉了。）;
+
+; 数值变化 - 极端惩罚
+setVar:affection=(affection)-100;
+setVar:reputation=(reputation)-50;
+setVar:danger=(danger)+100;
+
+; 边界保护
+setVar:affection=0 -when=affection<0;
+setVar:reputation=0 -when=reputation<0;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+
+; 直接跳转到坏结局
+changeScene:END_BE1_FIRED.txt;

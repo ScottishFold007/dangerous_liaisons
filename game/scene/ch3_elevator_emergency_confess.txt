@@ -1,0 +1,52 @@
+; 第三章 - 紧急按钮：真诚表白
+changeBg:elevator.png;
+bgm:tension_subtle.mp3;
+
+你:陈总，我...我只是想说，我很想你。;
+
+:她看着你，眼神从愤怒变成了复杂。;
+
+changeFigure:chenwei_suit_complex.png -left;
+陈薇:你这个傻瓜...;
+
+:她叹了口气。;
+
+陈薇:你知道吗？监控室的人现在肯定在看。;
+陈薇:我要怎么解释？;
+
+你:就说...我不小心碰到的。;
+
+陈薇:他们会信吗？;
+
+:她按下恢复按钮。;
+:电梯继续上升。;
+
+陈薇:李昂，下次...不要这么冲动了。;
+陈薇:我也想你。但不是这样。;
+
+; 柔和光晕 —— 她也想你的温柔时刻
+setAnimation:confession-glow -target=bg-main;
+
+:电梯到了20楼。;
+playEffect:elevator_door.mp3;
+:门开了，她快步走出去。;
+:但在转角处，她回头看了你一眼。;
+:那眼神里，有责怪，也有温柔。;
+
+; 数值变化 - 严重惩罚但有真诚表白的加分
+setVar:affection=(affection)+10;
+setVar:sanity=(sanity)-15;
+setVar:danger=(danger)+45;
+setVar:impulsive=1;
+setVar:reputation=(reputation)-10;
+
+; 边界保护
+setVar:danger=100 -when=danger>100;
+
+; 成就
+intro:🏆 成就解锁："勇敢的心" -fontSize=large -backgroundColor=rgba(0,0,0,0.9) -fontColor=rgba(255,215,0,1) -hold;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch3_daily_continue.txt;

@@ -1,0 +1,36 @@
+; 第二章结束
+changeBg:city_night.png;
+bgm:chapter_end.mp3;
+
+intro:第二章：职场试炼;
+
+:这一周，你经历了职场的考验。;
+:也和陈薇的关系有了微妙的变化。;
+
+:但你知道，这只是开始。;
+:真正的挑战，还在后面。;
+
+:（我和她之间...）;
+:（到底会走向何方？）;
+
+; 章节标题
+intro:第三章：暧昧升温|即将开始... -hold;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+
+; 边界保护 - 确保所有变量在合法范围内
+setVar:affection=0 -when=affection<0;
+setVar:affection=100 -when=affection>100;
+setVar:sanity=0 -when=sanity<0;
+setVar:sanity=100 -when=sanity>100;
+setVar:reputation=0 -when=reputation<0;
+setVar:reputation=100 -when=reputation>100;
+setVar:danger=0 -when=danger<0;
+setVar:danger=100 -when=danger>100;
+
+; 第二章结束 - 状态卡片
+intro:【第二章结束】|好感度：{affection}|理智值：{sanity}|职业声誉：{reputation}|危险指数：{danger} -fontSize=medium -backgroundColor=rgba(0,0,0,0.85) -fontColor=rgba(255,255,255,1) -hold;
+
+changeScene:ch3_start.txt;

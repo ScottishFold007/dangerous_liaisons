@@ -1,0 +1,50 @@
+; 第三章 - 结束
+changeBg:night_city.png;
+bgm:reflection_theme.mp3;
+
+:离开酒吧后，你独自走在夜晚的街道上。;
+
+:（今晚的对话，改变了很多事...）;
+:（我更了解她了，也更了解我们的关系。）;
+
+playEffect:phone_ring.wav;
+:手机震动了，是陈薇的短信。;
+
+; 根据是否know_secret，显示不同短信内容
+陈薇：谢谢你今晚愿意听我说这些。|晚安，李昂。 -when=know_secret==1;
+陈薇：周末愉快，李昂。|...晚安。 -when=know_secret==0;
+
+:你回复：晚安，陈薇。;
+
+:你抬头看着夜空。;
+:星星很少，城市的灯光太亮了。;
+
+:但你知道，星星一直都在。;
+:只是被遮住了而已。;
+
+:就像你和陈薇的关系。;
+:虽然要躲藏，但感情是真实的。;
+
+intro:第四周...;
+
+; 章节标题
+intro:第四章：抉择时刻 -hold;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+
+; 边界保护 - 确保所有变量在合法范围内
+setVar:affection=0 -when=affection<0;
+setVar:affection=100 -when=affection>100;
+setVar:sanity=0 -when=sanity<0;
+setVar:sanity=100 -when=sanity>100;
+setVar:reputation=0 -when=reputation<0;
+setVar:reputation=100 -when=reputation>100;
+setVar:danger=0 -when=danger<0;
+setVar:danger=100 -when=danger>100;
+
+; 第三章结束 - 状态卡片
+intro:【第三章结束】|好感度：{affection}|理智值：{sanity}|职业声誉：{reputation}|危险指数：{danger} -fontSize=medium -backgroundColor=rgba(0,0,0,0.85) -fontColor=rgba(255,255,255,1) -hold;
+
+changeScene:ch3_calm_moment.txt;

@@ -1,0 +1,24 @@
+; 第四章 - 被迫选择：结束
+changeBg:meeting_room_dark.png;
+bgm:serious_theme.mp3;
+
+你:对不起...那就结束吧。;
+
+changeFigure:chenwei_suit_shirt_desperate.png -left;
+陈薇:好。;
+
+:她转身离开，没有再说一句话。;
+
+; 数值变化
+setVar:affection=(affection)-50;
+setVar:sanity=(sanity)-45;
+setVar:danger=(danger)-30;
+; 边界保护
+setVar:affection=0 -when=affection<0;
+setVar:sanity=0 -when=sanity<0;
+setVar:danger=0 -when=danger<0;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:END_BE2_BREAKUP.txt;

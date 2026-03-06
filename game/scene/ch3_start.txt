@@ -1,0 +1,22 @@
+; 第三章 - 暧昧升温
+changeBg:city_morning.png;
+bgm:chapter_start.mp3;
+
+; 章节标题
+intro:第三章：暧昧升温 -hold;
+
+:第二章的危机过去了。;
+:你的方案最终得到了客户的认可。;
+:项目顺利推进。;
+
+:但你和陈薇的关系，变得越来越微妙。;
+
+:这天早上，你像往常一样来到公司。;
+:在电梯口遇到了陈薇。;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+; danger过高：陈薇刻意保持距离
+changeScene:ch3_elevator_scene_cold.txt -when=danger>40;
+changeScene:ch3_elevator_scene.txt;

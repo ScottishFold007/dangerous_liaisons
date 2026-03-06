@@ -1,0 +1,83 @@
+// Amber Dusk 主题 - 选择按钮样式
+// 琥珀黄昏：深琥珀底 + 奶油白文字 + 琥珀金边框
+// 对比度：#FFF8EE 在 #5C3D1A 上 ≈ 8.5:1
+
+.ChooseButton_chooseButton {
+  // 基础样式
+  min-width: 600px;
+  padding: 20px 40px;
+  margin: 10px 0;
+
+  // 深琥珀背景
+  background: rgba(92, 61, 26, 0.88);
+
+  // 琥珀金边框
+  border: 2px solid rgba(212, 160, 60, 0.4);
+  border-radius: 10px;
+
+  // 奶油白文字
+  color: #FFF8EE;
+  font-size: 120%;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.15em;
+
+  // 温暖阴影
+  box-shadow:
+    0 4px 15px rgba(26, 18, 9, 0.5),
+    inset 0 1px 0 rgba(245, 230, 211, 0.06);
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  // 悬停效果 - 暖光
+  &:hover {
+    background: rgba(92, 61, 26, 0.95);
+
+    // 琥珀金边框加亮
+    border-color: rgba(212, 160, 60, 0.75);
+
+    // 暖光发光效果
+    box-shadow:
+      0 0 18px rgba(212, 160, 60, 0.2),
+      0 6px 20px rgba(26, 18, 9, 0.6),
+      inset 0 0 12px rgba(212, 160, 60, 0.06);
+
+    // 轻微放大
+    transform: scale(1.02);
+  }
+
+  // 点击效果
+  &:active {
+    transform: scale(0.98);
+    box-shadow:
+      0 2px 10px rgba(26, 18, 9, 0.5),
+      inset 0 1px 0 rgba(245, 230, 211, 0.04);
+  }
+}
+
+// 选择按钮容器
+.ChooseButton_chooseContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+// 响应式设计
+@media (max-width: 1280px) {
+  .ChooseButton_chooseButton {
+    min-width: 500px;
+    font-size: 110%;
+    padding: 18px 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ChooseButton_chooseButton {
+    min-width: 80%;
+    font-size: 100%;
+    padding: 15px 30px;
+  }
+}

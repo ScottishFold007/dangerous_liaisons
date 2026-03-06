@@ -1,0 +1,37 @@
+; 第二章 - 办公室大胆：理智提醒
+changeBg:office_night.png;
+bgm:night_work.mp3;
+
+你:陈总，这里是办公室...;
+
+changeFigure:chenwei_suit_smile.png -left;
+陈薇:我知道。;
+
+:她退后一步。;
+
+陈薇:所以...你还是理智的。;
+
+:她的语气里有失望，也有欣赏。;
+
+陈薇:李昂，你很聪明。知道什么时候该冲动，什么时候该克制。;
+
+:她走到门口，解锁。;
+
+陈薇:周末...来我家。;
+陈薇:那里...不是办公室。;
+
+:她离开了，留下意味深长的一句话。;
+
+; 数值变化
+setVar:affection=(affection)+20;
+setVar:sanity=(sanity)+15;
+setVar:danger=(danger)+10;
+setVar:impulsive=1;
+
+; 成就提示
+intro:🏆 成就解锁：理智与情感|在冲动边缘保持理智 -fontSize=large -backgroundColor=rgba(0,0,0,0.9) -fontColor=rgba(255,215,0,1) -hold;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch2_end.txt;

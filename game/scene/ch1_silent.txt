@@ -1,0 +1,29 @@
+; 第一章：保持沉默
+changeBg:office_corridor.png -next;
+bgm:none;
+
+:你选择沉默，等待她的反应。;
+:几秒钟的安静让王经理有些不自在。;
+
+changeFigure:chenwei_suit_calm.png -left;
+陈薇:李总监，不用紧张。王经理，你先回去吧，我来带他。;
+changeFigure:wang_manager_smile.png -right;
+王经理:好的陈总。李总监，好好表现！;
+
+:王经理离开后，她盯着你看了几秒。;
+
+陈薇:聪明。知道什么时候该说话，什么时候该闭嘴。;
+
+:你不确定这是夸奖还是讽刺。;
+
+setVar:affection=(affection)+5;
+setVar:sanity=(sanity)+12;
+setVar:reputation=(reputation)+5;
+setVar:danger=(danger)+8;
+; 边界检查
+setVar:danger=100 -when=danger>100;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:ch1_corridor_alone.txt;

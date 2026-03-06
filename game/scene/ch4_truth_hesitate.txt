@@ -1,0 +1,29 @@
+; 第四章 - 真相：犹豫
+changeBg:villa_living_room.png;
+bgm:revelation_theme.mp3;
+
+你:我需要时间考虑...;
+
+changeFigure:chenwei_casual_lost.png -left;
+
+:她点了点头。;
+
+陈薇:我理解。;
+陈薇:这确实...不是一件小事。;
+
+:她站起身。;
+
+陈薇:你慢慢想吧。;
+陈薇:不管你做什么决定，我都尊重。;
+
+:气氛变得有些尴尬。;
+
+; 数值变化
+setVar:affection=(affection)-10;
+setVar:know_secret=1;
+setVar:sanity=(sanity)+15;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch4_villa_end.txt;

@@ -1,0 +1,41 @@
+; 第二章 - 夜晚选择：轻微调情
+changeBg:office_night.png;
+bgm:night_work.mp3;
+
+你:那您打算怎么"欣赏"我？;
+
+:你故意用了一个暧昧的语气。;
+:陈薇愣了一下，然后笑了。;
+
+changeFigure:chenwei_suit_smile.png -left;
+陈薇:李总监，你胆子不小啊。;
+陈薇:敢这样和你的上司说话？;
+
+你:我只是...实话实说。;
+
+changeFigure:chenwei_suit_gentle.png -left;
+陈薇:是吗？;
+
+:她突然靠近了一些。;
+:你能感觉到她的呼吸。;
+
+陈薇:那我告诉你...;
+陈薇:我欣赏你的方式，可能和你想的不太一样。;
+
+你:什么意思？;
+
+陈薇:以后你就知道了。;
+
+:她站起身，留下一个意味深长的笑容。;
+
+陈薇:晚安，李昂。;
+
+; 数值变化
+setVar:affection=(affection)+20;
+setVar:sanity=(sanity)-5;
+setVar:danger=(danger)+15;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch2_end.txt;

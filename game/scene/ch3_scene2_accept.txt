@@ -1,0 +1,22 @@
+; 第三章 - 场景2：接受邀约
+changeBg:office_evening.png -next;
+bgm:evening_theme.mp3;
+
+; 短信回复
+
+你（短信）:好，几点？在哪？;
+miniAvatar:chenwei_avatar.png -left;
+陈薇（短信）:晚上8点，上次那个酒吧。;
+陈薇（短信）:我们需要谈谈。;
+miniAvatar:none;
+
+:你看着"我们需要谈谈"这几个字，心里有些不安。;
+:这通常不是什么好话。;
+
+:（她是不是也听说了流言？）;
+:（还是...有别的事？）;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:ch3_bar_meeting.txt;

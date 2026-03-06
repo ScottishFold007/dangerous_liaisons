@@ -1,0 +1,36 @@
+; 序章：绅士选择
+
+changeBg:street_night.png -next;
+bgm:night_city.mp3;
+
+你:我送你回家吧。;
+陈薇:不用...我可以自己...;
+
+:她话还没说完，就踉跄了一下。;
+:你扶住了她。;
+
+你:你这样回不去的。至少让我送你到家门口。;
+
+changeFigure:chenwei_casual_drunk.png -next;
+
+:她看着你，眼神有些迷离。;
+
+陈薇:你...是个好人。;
+陈薇:但今晚，我不想遇到好人。;
+
+:她突然靠近你，声音很低。;
+
+陈薇:我想...忘记一切。哪怕只是今晚。;
+
+:她的眼神里有一种近乎绝望的渴望。;
+:不是欲望，而是想要逃避现实的渴望。;
+
+:（她在寻求慰藉。）;
+:（而我...也是。）;
+
+:你没有说话，只是握住了她的手。;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:prologue_morning.txt;

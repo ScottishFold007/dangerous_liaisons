@@ -1,0 +1,62 @@
+; 第五章 - 策略讨论
+changeBg:office_ceo.png;
+bgm:crisis_theme.mp3;
+unlockBgm:crisis_theme.mp3 -name=生死抉择 -series=抉择;
+
+changeFigure:chenwei_suit_serious.png -left;
+陈薇:坐。;
+
+:你坐下。;
+
+陈薇:有人向董事会举报我们。;
+陈薇:而且，举报信里有证据——我们在九楼会议室的照片。 -when=public_rel==1;
+陈薇:而且，举报信里有证据——有人拍到了我们周末在别墅附近的照片。 -when=public_rel==0;
+
+你:照片？！;
+
+陈薇:应该是上周五晚上，保安拍的。 -when=public_rel==1;
+陈薇:应该是有人跟踪了我们，趁我们不注意的时候拍的。 -when=public_rel==0;
+陈薇:我查过了，那个保安已经辞职了。 -when=public_rel==1;
+陈薇:我查过了，那个人很专业，没有留下什么痕迹。 -when=public_rel==0;
+陈薇:显然，有人收买了他。 -when=public_rel==1;
+陈薇:显然，有人在暗中策划这一切。 -when=public_rel==0;
+
+你:是谁？;
+
+陈薇:我有怀疑对象。;
+
+:她打开电脑，给你看一份文件。;
+
+陈薇:市场部经理，老刘。;
+陈薇:他一直想要我的位置。;
+陈薇:这次，他抓住了机会。;
+
+:她合上电脑。;
+
+陈薇:现在有三个选择。;
+陈薇:第一，我们public_rel，接受董事会的调查。;
+陈薇:可能我会被降职，你会被开除。;
+陈薇:第二，我们否认一切，你主动辞职。;
+陈薇:这样可以保住我的位置，但我们的关系也就结束了。;
+陈薇:第三，我们反击。找出老刘的把柄，先下手为强。;
+
+:她看着你。;
+
+陈薇:你选哪个？;
+
+; 边界保护 - 确保所有变量在合法范围内
+setVar:affection=0 -when=affection<0;
+setVar:affection=100 -when=affection>100;
+setVar:sanity=0 -when=sanity<0;
+setVar:sanity=100 -when=sanity>100;
+setVar:reputation=0 -when=reputation<0;
+setVar:reputation=100 -when=reputation>100;
+setVar:danger=0 -when=danger<0;
+setVar:danger=100 -when=danger>100;
+
+; 第五章结束 - 状态卡片
+intro:【第五章结束】|好感度：{affection}|理智值：{sanity}|职业声誉：{reputation}|危险指数：{danger} -fontSize=medium -backgroundColor=rgba(0,0,0,0.85) -fontColor=rgba(255,255,255,1) -hold;
+
+; 选择分支
+changeFigure:none -left;
+choose:public_rel，我们一起面对:ch6_choice1_public.txt|我辞职，保护你:ch6_choice2_resign.txt|反击，找出幕后黑手:ch6_choice3_fight.txt;

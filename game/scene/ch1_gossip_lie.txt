@@ -1,0 +1,37 @@
+; 第一章：撒谎
+changeBg:office_room.png;
+bgm:work_busy.mp3;
+
+你:我在等人。;
+
+changeFigure:chenwei_suit_displeased.png;
+
+陈薇:等谁？;
+
+你:我...;
+
+:她盯着你，眼神锐利。;
+
+陈薇:李总监，我不喜欢说谎的人。;
+
+:她走近一步，声音很低。;
+
+陈薇:你在偷听同事八卦，对吗？;
+
+:你无法回答。;
+
+陈薇:我给你一个建议：在这个公司，少听、少说、多做事。;
+
+:她转身离开。;
+
+陈薇:会议室见。;
+
+setVar:affection=(affection)-15;
+setVar:sanity=(sanity)-8;
+setVar:reputation=(reputation)-10;
+setVar:danger=(danger)+10;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch1_meeting.txt;

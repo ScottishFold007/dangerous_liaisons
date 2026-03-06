@@ -1,0 +1,63 @@
+; 第三章 - 陈薇的故事（第一部分）
+changeBg:bar_night.png;
+bgm:melancholy_theme.mp3;
+unlockBgm:melancholy_theme.mp3 -name=忧伤往事 -series=往事;
+
+changeFigure:chenwei_casual_calm.png -left;
+
+; 温暖回忆 —— 她开始讲述自己的过去
+setAnimation:slow-fade-warm -target=bg-main;
+
+陈薇:我今年三十岁。;
+陈薇:二十五岁创业，二十八岁公司上市，三十岁成为最年轻的女CEO之一。;
+
+:她的语气很平静，像在讲别人的故事。;
+
+陈薇:外人看来，我很成功。;
+陈薇:但他们不知道，我付出了什么代价。;
+
+:她喝了一口酒。;
+
+陈薇:我父亲是商人，从小教育我：商场如战场，弱肉强食。;
+陈薇:他说，女人想要成功，就必须比男人更强硬，更冷酷。;
+陈薇:所以我学会了隐藏情绪，学会了算计，学会了...不相信任何人。;
+
+:她的声音有些颤抖。;
+
+陈薇:二十六岁那年，我结婚了。;
+
+你:你结过婚？;
+
+陈薇:嗯。维持了不到一年。;
+
+:她苦笑了一下。;
+
+changeBg:bar_night.png -transform={"oldFilm":1,"saturation":0.4,"brightness":0.7};
+
+陈薇:他是我大学同学，我以为他爱的是我这个人。;
+陈薇:但后来我发现，他爱的是我的钱，我的地位。;
+陈薇:他出轨了，和我的秘书。;
+
+:她的手握紧了酒杯。;
+
+陈薇:离婚后，我告诉自己：再也不要相信爱情。;
+陈薇:工作就够了。权力、金钱、地位，这些才是可靠的。;
+
+changeBg:bar_night.png -transform={};
+
+:她转头看着你。;
+
+; 表白过的玩家：陈薇有额外回应
+陈薇:你那天晚上说的话...我一直记得。 -when=confessed==1;
+陈薇:所以今晚，我想告诉你一些事情。 -when=confessed==1;
+
+陈薇:然后，张明出现了。;
+
+; know_secret：已知道一些内情的玩家有额外反应
+:（她提到的这些事...和我之前听到的那些传闻对上了。） -when=know_secret==1;
+:（这个公司的水...比我想象的还深。） -when=know_secret==1;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch3_zhangming_story.txt;

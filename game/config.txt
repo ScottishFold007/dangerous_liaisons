@@ -1,0 +1,10 @@
+Game_name:救命！我睡了我老板;
+Game_key:DL2026v25;
+Title_img:title_bg.png;
+Title_bgm:bgm_title.mp3;
+Enable_Appreciation:true;
+Default_Language:zh_CN;
+Max_line:3;
+Line_height:1.8;
+Package_name:;
+Game_Logo:bg-cover.png;

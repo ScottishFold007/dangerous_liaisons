@@ -1,0 +1,26 @@
+; 第一章：开始工作
+
+changeBg:office_room.png -next;
+bgm:work_routine.mp3;
+
+:门关上了。;
+:你一个人站在空荡荡的办公室里，后背已经被冷汗湿透。;
+:第一天就这么刺激，接下来的日子会怎样？;
+
+:（冷静。）;
+:（这只是工作。）;
+:（我需要证明自己的能力。）;
+
+:你走到办公桌前，打开电脑。;
+:邮箱里已经有一封邮件。;
+miniAvatar:system_icon.png -left;
+intro:发件人：陈薇|主题：项目方案汇报||李总监，||请在今天下午3:00前准备好项目方案汇报。||参会人员：市场部经理、技术部经理、财务总监。||这是你的第一次亮相，请认真准备。||——陈薇;
+miniAvatar:none;
+:你深吸一口气，开始准备。;
+
+intro:五小时后...;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:ch1_meeting_prep.txt;

@@ -1,0 +1,152 @@
+; 第三章 - 老刘请咖啡
+changeBg:office_corridor.png;
+bgm:daily_work.mp3;
+
+:午休时间，你去茶水间倒水。;
+
+changeFigure:laoliu_friendly.png -right;
+
+:刘经理端着两杯咖啡，正好从走廊那头走过来。;
+
+老刘:哟，李总监！;
+老刘:正好正好，刚买了两杯，请你一杯。;
+
+:他把其中一杯塞到你手里，热的。;
+
+:（上次开会见过他，挺热情的一个前辈。）;
+
+你:谢谢刘经理。;
+
+老刘:叫什么刘经理，叫老刘就行。;
+老刘:走走走，茶水间坐会儿，聊两句。;
+
+changeBg:pantry.png;
+
+:你们在茶水间的沙发上坐下。;
+:老刘喝了口咖啡，感慨了一声。;
+
+老刘:我在这公司十二年了，什么事没见过。;
+老刘:陈总不容易啊，一个女人撑起这么大的公司。;
+
+; 选择分支1
+changeFigure:none -right;
+choose:是啊，陈总很厉害:laoliu_coffee_praise|刘经理认识陈总很久了？:laoliu_coffee_ask|谢了，我先回去了:laoliu_coffee_leave;
+
+; ===== 选择1：称赞陈总 =====
+label:laoliu_coffee_praise;
+changeFigure:laoliu_friendly.png -right;
+
+你:是啊，陈总能力很强。;
+
+老刘:那是。不过呢...;
+老刘:能力强的人，敌人也多。;
+老刘:你跟着陈总做事，多留个心眼。;
+
+:（他这是在提醒我？还是在试探我？）;
+
+jumpLabel:laoliu_coffee_key;
+
+; ===== 选择2：追问往事 =====
+label:laoliu_coffee_ask;
+changeFigure:laoliu_friendly.png -right;
+
+你:刘经理认识陈总很久了吗？;
+
+老刘:久了。她当年空降过来当CEO的时候，我就在了。;
+老刘:那时候公司内部反对声很大，觉得一个外人凭什么来管。;
+老刘:不过后来...她确实有两把刷子。;
+
+:他说"两把刷子"的时候，语气里有一丝说不清的东西。;
+:不像佩服，更像是...忌惮。;
+
+jumpLabel:laoliu_coffee_key;
+
+; ===== 选择3：快速离开 =====
+label:laoliu_coffee_leave;
+changeFigure:laoliu_friendly.png -right;
+
+你:谢了老刘，我手头还有点活，先回去了。;
+
+老刘:行行行，年轻人有干劲。;
+
+:你端着咖啡站起来。;
+
+老刘:对了——;
+
+:他叫住了你。;
+
+老刘:你和陈总...经常加班到很晚吧？;
+
+:（突然问这个？）;
+
+changeFigure:none -right;
+choose:是的，项目赶得紧:laoliu_leave_yes|还好吧:laoliu_leave_safe;
+
+label:laoliu_leave_yes;
+changeFigure:laoliu_friendly.png -right;
+setVar:suspected=1;
+老刘:那可得注意身体啊，哈哈。;
+:他笑了笑，但眼睛没笑。;
+:（...我是不是说多了？）;
+jumpLabel:laoliu_coffee_end;
+
+label:laoliu_leave_safe;
+changeFigure:laoliu_friendly.png -right;
+老刘:也是，保重身体。;
+:（还好没多说什么。）;
+jumpLabel:laoliu_coffee_end;
+
+; ===== 关键问题 =====
+label:laoliu_coffee_key;
+
+:老刘又喝了口咖啡，像是不经意地问了一句。;
+
+老刘:对了，你和陈总...经常加班到很晚？;
+
+:他端着杯子，笑眯眯地看着你。;
+:但那双眼睛里，有某种东西在计算。;
+
+changeFigure:none -right;
+choose:是的，最近项目忙:laoliu_key_yes|还好:laoliu_key_safe|工作需要嘛:laoliu_key_vague;
+
+label:laoliu_key_yes;
+changeFigure:laoliu_friendly.png -right;
+setVar:suspected=1;
+老刘:年轻人有拼劲，好事好事。;
+:他拍了拍你的肩膀，笑得很慈祥。;
+:（但他记住了这个回答。你后来才明白。）;
+jumpLabel:laoliu_coffee_end;
+
+label:laoliu_key_safe;
+changeFigure:laoliu_friendly.png -right;
+老刘:也是。别太累了。;
+:（差点上套。这个问题不简单。）;
+jumpLabel:laoliu_coffee_end;
+
+label:laoliu_key_vague;
+changeFigure:laoliu_friendly.png -right;
+老刘:说的也是，工作嘛。;
+:他笑了笑，没再追问。;
+:（模糊过去了...应该没什么问题。）;
+jumpLabel:laoliu_coffee_end;
+
+; ===== 场景结束 =====
+label:laoliu_coffee_end;
+
+changeFigure:none -right;
+
+:老刘站起来，拍了拍裤子上并不存在的灰。;
+
+changeFigure:laoliu_friendly.png -right;
+老刘:行了，不耽误你干活了。;
+老刘:以后有事随时找老刘。;
+
+:他笑着走了。;
+:你看着他的背影，说不上来是什么感觉。;
+
+:（挺好一人...就是问题有点多。）;
+
+changeFigure:none -right;
+changeFigure:none -left;
+changeFigure:none;
+changeScene:ch3_daily_scene1.txt;

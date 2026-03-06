@@ -1,0 +1,52 @@
+; 第四章 - 选择：结束
+changeBg:meeting_room_dark.png;
+bgm:serious_theme.mp3;
+
+你:我选择结束。这样对大家都好。;
+
+:她的眼神暗淡了。;
+
+changeFigure:chenwei_casual_shirt_lost.png  -left;
+陈薇:好。;
+
+:她转身，背对着你。;
+
+陈薇:你说得对。这样...对大家都好。;
+
+:她的声音很平静，但你能感觉到她的失落。;
+
+陈薇:那就这样吧。;
+陈薇:从明天开始，我们保持纯粹的上下级关系。;
+
+:她转回来，眼眶有些红，但强忍着泪水。;
+
+陈薇:谢谢你这段时间的陪伴。;
+陈薇:再见，李昂。;
+
+; 数值变化
+setVar:affection=(affection)-40;
+setVar:sanity=(sanity)+15;
+setVar:danger=(danger)-30;
+
+; 边界保护
+setVar:affection=0 -when=affection<0;
+setVar:danger=0 -when=danger<0;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+
+; 边界保护 - 确保所有变量在合法范围内
+setVar:affection=0 -when=affection<0;
+setVar:affection=100 -when=affection>100;
+setVar:sanity=0 -when=sanity<0;
+setVar:sanity=100 -when=sanity>100;
+setVar:reputation=0 -when=reputation<0;
+setVar:reputation=100 -when=reputation>100;
+setVar:danger=0 -when=danger<0;
+setVar:danger=100 -when=danger>100;
+
+; 第四章结束 - 状态卡片
+intro:【第四章结束】|好感度：{affection}|理智值：{sanity}|职业声誉：{reputation}|危险指数：{danger} -fontSize=medium -backgroundColor=rgba(0,0,0,0.85) -fontColor=rgba(255,255,255,1) -hold;
+
+changeScene:END_BE2_BREAKUP.txt;

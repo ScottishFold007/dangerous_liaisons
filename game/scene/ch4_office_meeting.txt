@@ -1,0 +1,61 @@
+; 第四章 - 办公室会面
+changeBg:office_ceo.png -next;
+bgm:calm_office.mp3;
+
+playEffect:knock_door.mp3;
+:下午5:30，你敲门进入陈薇的办公室。;
+:她坐在办公桌后，正在看文件。;
+
+changeFigure:chenwei_suit_serious.png -left;
+陈薇:李总监，坐。;
+
+:她的语气很公事公办。;
+:你坐下，开始汇报项目进度。;
+:汇报进行了十分钟。;
+
+陈薇:很好，项目进展顺利。;
+
+:她合上文件。;
+
+陈薇:还有其他事吗？;
+
+:她的眼神在问：还有其他人吗？;
+:你看了看门，门是关着的，但玻璃是透明的。;
+:外面还有几个同事在加班。;
+
+:（现在不是说私事的时候。）;
+
+你:没有了。;
+
+陈薇:那你可以走了。;
+
+:你站起身，准备离开。;
+:走到门口时，她突然开口。;
+
+陈薇:李总监。;
+
+你:是？;
+
+陈薇:辛苦了。早点回家休息。;
+
+:她的语气很平常，但眼神里有别的东西。;
+
+你:您也是。;
+
+:你走出办公室。;
+playEffect:phone_ring.wav;
+:刚走几步，手机震动了。;
+:是陈薇的短信。;
+
+; 短信
+miniAvatar:chenwei_avatar.png -left;
+陈薇（短信）:今晚9点，九楼会议室。;
+陈薇（短信）:我有话要说。——陈薇;
+miniAvatar:none;
+
+:（九楼会议室，很少有人用，晚上更是空无一人。）;
+:（她想单独见我。但这很危险...）;
+
+; 选择分支
+changeFigure:none -left -next;
+choose:去九楼会议室:ch4_go_meeting_room.txt|回复"不合适":ch4_refuse_meeting.txt|不回复，直接下班:ch4_avoid_meeting.txt;

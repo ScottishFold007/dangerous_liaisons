@@ -1,0 +1,29 @@
+; 第一章：提起那晚 ⚠️
+changeBg:office_room.png -next;
+bgm:calm_office.mp3;
+
+你:陈总，关于那晚...;
+
+changeFigure:chenwei_suit_angry.png;
+
+:她的脸色瞬间变了。;
+
+陈薇:李总监，我不知道你在说什么。;
+
+:她走进办公室，关上了门。;
+:距离突然变得很近，但不是亲密的那种近，而是压迫性的近。;
+
+陈薇:你是想威胁我吗？;
+
+你:不，我没有...;
+
+陈薇:那你最好忘记那晚的事。彻底忘记。;
+
+:她盯着你看了几秒，眼神里是你从未见过的冰冷。;
+
+陈薇:如果你做不到，那我建议你现在就辞职。;
+
+:这是最后通牒。;
+
+changeFigure:none -next;
+choose:对不起，我说错话了:ch1_office_apologize.txt|我只是想说，我不会告诉任何人:ch1_office_explain.txt;

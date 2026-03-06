@@ -1,0 +1,24 @@
+; 第三章 - 场景2：告知流言
+changeBg:office_evening.png;
+bgm:evening_theme.mp3;
+
+; 短信回复
+
+你（短信）:陈总，公司里有些流言，说我们关系不一般。;
+你（短信）:我觉得我们应该小心一点。;
+
+:发送后，她很快回复了。;
+miniAvatar:chenwei_avatar.png -left;
+陈薇（短信）:我知道。;
+陈薇（短信）:所以我们需要谈谈。;
+陈薇（短信）:晚上8点，上次那个酒吧。;
+miniAvatar:none;
+
+; 数值变化
+setVar:sanity=(sanity)+10;
+setVar:affection=(affection)+5;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch3_bar_meeting.txt;

@@ -1,0 +1,37 @@
+; 第二章 - 危机选择2：稳妥优化
+changeBg:office_meeting.png;
+bgm:tense_meeting.mp3;
+
+你:我认为，我们的方案基础是好的。;
+你:只需要在创意上做一些优化，在执行细节上补充完善。;
+你:这样既能满足客户需求，又能保证质量。;
+
+:会议室里的气氛稍微缓和了一些。;
+:有几个同事点了点头。;
+
+changeFigure:chenwei_suit_thinking.png -left;
+陈薇:优化...;
+陈薇:李总监，你确定这样就够了吗？;
+
+你:我会亲自把关每一个细节。;
+你:保证让客户满意。;
+
+changeFigure:chenwei_suit_serious.png -left;
+陈薇:好吧。那就按你说的做。;
+陈薇:但我希望看到实质性的改进，不是敷衍了事。;
+
+你:明白。;
+
+; 数值变化
+setVar:reputation=(reputation)-15;
+setVar:affection=(affection)-10;
+setVar:sanity=(sanity)+5;
+setVar:danger=(danger)-5;
+
+:会议结束后，陈薇没有多说什么。;
+:她的表情看起来有些失望。;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch2_after_meeting_cold.txt;

@@ -1,0 +1,23 @@
+; 第一章：简短回答
+changeBg:office_corridor.png;
+bgm:tension_intimate.mp3;
+
+你:我可以。;
+
+changeFigure:chenwei_suit_thoughtful.png;
+
+陈薇:简洁。我喜欢。;
+
+:她继续往前走。;
+
+陈薇:不过，能不能承受，不是嘴上说说就行的。;
+
+; 数值变化
+setVar:reputation=(reputation)+5;
+setVar:sanity=(sanity)+5;
+setVar:affection=(affection)+3;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch1_office_intro.txt;

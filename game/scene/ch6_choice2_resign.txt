@@ -1,0 +1,36 @@
+; 第六章 - 选择2：辞职保护
+changeBg:office_ceo.png -next;
+bgm:crisis_theme.mp3;
+
+你:我辞职，保护你。;
+
+changeFigure:chenwei_suit_shocked.png -left;
+陈薇:什么？;
+
+你:这是最好的办法。;
+你:我辞职，流言自然就会平息。;
+你:你可以继续做CEO，公司也不会受影响。;
+
+陈薇:但是...我们...;
+
+你:我们还可以在一起。;
+你:只是不在同一家公司而已。;
+
+:她沉默了很久。;
+
+changeFigure:chenwei_suit_complex.png -left;
+陈薇:李昂，你真的想好了吗？;
+
+你:想好了。;
+
+陈薇:好。那我尊重你的决定。;
+
+:她的声音有些颤抖。;
+
+陈薇:但我不会让你白白牺牲。;
+陈薇:我会给你写推荐信，帮你找更好的工作。;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:ch6_resign_farewell.txt;

@@ -1,0 +1,25 @@
+; 第一章：道歉
+changeBg:office_room.png;
+bgm:calm_office.mp3;
+
+你:对不起，我说错话了。;
+
+changeFigure:chenwei_suit_serious.png;
+
+:她的表情稍微缓和了一点，但依然冷淡。;
+
+陈薇:希望你记住今天的教训。;
+
+:她打开门，准备离开。;
+
+陈薇:下午三点，会议室。别迟到。;
+
+setVar:affection=(affection)-20;
+setVar:sanity=(sanity)+5;
+setVar:reputation=(reputation)-10;
+setVar:danger=(danger)+25;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch1_work_start.txt;

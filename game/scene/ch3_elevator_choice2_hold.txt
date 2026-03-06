@@ -1,0 +1,40 @@
+; 第三章 - 电梯选择2：握住她的手
+changeBg:elevator.png;
+bgm:tension_subtle.mp3;
+
+:你轻轻握住了她的手。;
+:她的手很凉，但握得很紧。;
+
+changeFigure:chenwei_suit_gentle.png -left;
+陈薇:李昂...;
+
+:她叫了你的名字，不是"李总监"。;
+
+陈薇:我想你了。;
+
+:电梯显示：18楼。;
+:还有10秒。;
+
+你:我也是。;
+
+:电梯到了20楼。;
+playEffect:elevator_door.mp3;
+:门开了，外面有几个同事在等。;
+:你们立刻松开手，保持距离。;
+
+changeFigure:chenwei_suit_calm.png -left;
+陈薇:李总监，早。;
+
+你:陈总，早。;
+
+:你们擦肩而过，但手心还留着她的温度。;
+
+; 数值变化
+setVar:affection=(affection)+20;
+setVar:sanity=(sanity)-5;
+setVar:danger=(danger)+15;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch3_daily_continue.txt;

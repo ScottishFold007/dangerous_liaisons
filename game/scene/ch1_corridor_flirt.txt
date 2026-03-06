@@ -1,0 +1,45 @@
+; 第一章：大胆调情 🔥
+changeBg:office_corridor.png;
+bgm:tension_intimate.mp3;
+
+你:陈总，您离我这么近...我压力很大。;
+
+:空气凝固了一秒。;
+:你突然意识到自己说了什么。;
+
+:（完了，我疯了吗？！）;
+
+changeFigure:chenwei_suit_smile.png;
+
+:但陈薇没有生气。;
+:她轻笑了一声，那笑容里有意外，也有一丝欣赏。;
+
+陈薇:哦？李总监，你这是在...调戏上司？;
+
+:她又往前走了一步，距离更近了。;
+
+陈薇:还是说...你在邀请我给你更大的压力？;
+
+:她的手指轻轻点在你的胸口。;
+
+playEffect:heartbeat_fast.wav;
+
+陈薇:小心点，李总监。在职场上，有些玩笑...开不得。;
+
+:她转身离开，留下一句话。;
+
+陈薇:不过...我喜欢有胆量的人。;
+
+:（我...我刚才是不是太大胆了？）;
+:（但她好像...不讨厌？）;
+
+setVar:affection=(affection)+15;
+setVar:sanity=(sanity)-10;
+setVar:danger=(danger)+20;
+setVar:impulsive=1;
+setVar:reputation=(reputation)-5;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch1_office_intro.txt;

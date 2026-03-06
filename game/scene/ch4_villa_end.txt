@@ -1,0 +1,29 @@
+; 第四章 - 别墅结束
+changeBg:villa_sunset.png;
+bgm:evening_peaceful.mp3;
+
+:夕阳西下，你们坐在阳台上。;
+:远处的天空被染成了橙红色。;
+
+changeFigure:chenwei_casual_calm.png -left;
+陈薇:李昂，不管未来怎样...;
+陈薇:至少现在这一刻，我是幸福的。;
+
+你:我也是。;
+
+:她靠在你肩上。;
+:时间仿佛静止了。;
+
+:但你们都知道，平静不会持续太久。;
+:暴风雨即将来临。;
+
+intro:第二天，周一;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+
+; 第四章结束 - 状态卡片
+intro:【第四章结束】|好感度：{affection}|理智值：{sanity}|职业声誉：{reputation}|危险指数：{danger} -fontSize=medium -backgroundColor=rgba(0,0,0,0.85) -fontColor=rgba(255,255,255,1) -hold;
+
+changeScene:ch5_start.txt;

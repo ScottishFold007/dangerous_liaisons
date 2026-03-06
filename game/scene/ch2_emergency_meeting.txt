@@ -1,0 +1,37 @@
+; 第二章 - 紧急会议
+changeBg:office_meeting.png -next;
+bgm:tense_meeting.mp3;
+
+; 会议室场景
+changeFigure:chenwei_suit_serious.png -left; 
+陈薇:各位，客户刚刚打来电话，对我们的方案提出了质疑。;
+陈薇:他们认为我们的创意不够大胆，执行方案也不够细致。;
+
+:会议室里的气氛凝重。;
+:所有人都低着头，不敢说话。;
+
+陈薇:李总监，你是这个项目的负责人。;
+陈薇:你觉得...我们应该怎么办？;
+
+:所有人的目光都集中在你身上。;
+:这是一次考验。;
+
+; 老刘登场——看似友善的前辈
+changeFigure:laoliu_friendly.png -right -next;
+:角落里，一个中年男人微微点头，冲你笑了笑。;
+:旁边的同事小声说：那是市场部的刘经理，公司老人了。;
+
+老刘:李总监别紧张，新人嘛，慢慢来。;
+老刘:要是需要帮忙，随时来找我。市场部那边的数据我都熟。;
+
+:（这个刘经理...挺热情的。）;
+changeFigure:none -right -next;
+
+:（这是个陷阱题...）;
+:（说得太激进，可能被认为不稳重...）;
+:（说得太保守，又显得没魄力...）;
+
+; 选择分支
+陈薇:李总监？;
+changeFigure:none -left -next;
+choose:方案1：大胆创新，推翻重做:ch2_crisis_choice1_innovative.txt|方案2：稳妥优化，小幅调整:ch2_crisis_choice2_conservative.txt|方案3：先听客户具体意见:ch2_crisis_choice3_cautious.txt;

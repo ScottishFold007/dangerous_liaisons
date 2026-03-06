@@ -1,0 +1,32 @@
+; 第三章 - 酒吧：不后悔
+changeBg:bar_night.png;
+bgm:jazz_bar.mp3;
+
+你:不后悔。;
+
+changeFigure:chenwei_casual_touched.png -left;
+陈薇:即使要面对流言？即使可能影响你的职业生涯？;
+
+你:即使这样。;
+
+:她的眼眶有些红。;
+
+陈薇:傻瓜。;
+
+:她靠在你肩上。;
+
+陈薇:其实...我也不后悔。;
+
+:她抬起头，看着你。;
+
+陈薇:李昂，我要告诉你一些事。;
+陈薇:关于张明，关于我的过去。;
+
+; 数值变化
+setVar:affection=(affection)+20;
+setVar:danger=(danger)+15;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch3_chenwei_story.txt;

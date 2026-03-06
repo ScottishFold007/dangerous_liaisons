@@ -1,0 +1,29 @@
+; 序章：邀请选择
+
+changeBg:street_night.png -next;
+bgm:night_city.mp3;
+
+你:要不要去我那里坐坐？;
+
+:她看着你，沉默了几秒。;
+
+陈薇:你知道这意味着什么吗？;
+你:我知道。;
+陈薇:我们甚至不知道彼此的名字。;
+你:也许...这样更好。;
+
+changeFigure:chenwei_casual_smile.png -next;
+
+:她笑了，那笑容里有一种释然。;
+
+陈薇:你说得对。今晚，我们只是两个陌生人。;
+陈薇:明天，一切都会回到原来的样子。;
+
+:她握住了你的手。;
+
+陈薇:走吧。;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:prologue_morning.txt;

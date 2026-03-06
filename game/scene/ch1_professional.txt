@@ -1,0 +1,35 @@
+; 第一章：职业化应对
+changeBg:office_corridor.png -next;
+bgm:none;
+
+你:陈总好，很荣幸加入公司。;
+
+:你伸出手。;
+:她的手很凉，握手时食指在你掌心轻轻划过——就像那晚那样。;
+:只有一瞬间，但足够让你浑身一颤。;
+
+changeFigure:chenwei_suit_smile.png -left;
+陈薇:很好。我欣赏专业的态度。;
+
+:她转向王经理。;
+
+陈薇:王经理，你先去忙吧。我亲自带李总监熟悉环境。;
+changeFigure:wang_manager_smile.png -right;
+王经理:好的陈总！李总监，好好表现！;
+
+:王经理离开后，走廊里只剩你们两人。;
+:她的表情没有变化，但气氛瞬间变得微妙。;
+
+陈薇:跟我来。;
+
+setVar:affection=(affection)+12;
+setVar:sanity=(sanity)+8;
+setVar:reputation=(reputation)+8;
+setVar:danger=(danger)+5;
+; 边界检查
+setVar:danger=100 -when=danger>100;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:ch1_corridor_alone.txt;

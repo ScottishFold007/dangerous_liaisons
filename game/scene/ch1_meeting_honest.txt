@@ -1,0 +1,32 @@
+; 第一章：诚实回答
+changeBg:meeting_room.png;
+bgm:presentation_theme.mp3;
+
+你:坦白说，这个数据不是最新的。因为时间紧迫，我使用了三个月前的行业报告。;
+你:我会在本周内补充最新的市场调研，并重新评估预测数据。;
+
+:会议室里安静了几秒。;
+
+changeFigure:chenwei_suit_calm.png -left;
+陈薇:至少你诚实。;
+
+:她看向其他人。;
+
+陈薇:大家还有问题吗？;
+
+changeFigure:marketing_manager_suit.png -right;
+技术部经理:我觉得技术方案部分很扎实。;
+财务总监:预算控制也合理。;
+市场部经理:市场定位准确，只是数据需要更新。;
+
+陈薇:好。李总监，周五之前把补充报告发给我。散会。;
+
+; 数值变化
+setVar:affection=(affection)+10;
+setVar:reputation=(reputation)+5;
+setVar:sanity=(sanity)+10;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch1_meeting_aftermath.txt;

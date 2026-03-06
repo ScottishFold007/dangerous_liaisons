@@ -1,0 +1,52 @@
+; 第四章 - 九楼会议室
+changeBg:meeting_room_dark.png -next;
+bgm:intimate_tension.mp3;
+
+:晚上九点，你来到九楼。;
+:走廊里很安静，只有应急灯还亮着。;
+:会议室的门虚掩着。;
+
+playEffect:door_open.mp3;
+:你推开门。;
+:陈薇站在落地窗前，背对着你。;
+:她已经脱下了外套，只穿着衬衫。;
+
+changeFigure:chenwei_casual_shirt_gentle.png  -left;
+陈薇:关门。;
+
+:你关上门。;
+:她转过身，走向你。;
+
+陈薇:这一周，很辛苦吧。;
+
+你:还好。;
+
+陈薇:流言的事...对不起。;
+
+:她的声音有些愧疚。;
+
+陈薇:都是因为我，你才被卷入这些。;
+
+你:不是你的错。;
+
+陈薇:但我...;
+
+:她没有说完，只是走近你。;
+
+陈薇:李昂，我想你了。;
+陈薇:这一周，我们几乎没有说过话。;
+陈薇:我知道这是为了避嫌，但是...;
+陈薇:我还是想见你。;
+
+:她吻了你。;
+
+playEffect:heartbeat.mp3;
+
+:突然，走廊里传来脚步声。;
+:有人来了！;
+
+playEffect:footsteps.mp3;
+
+; 选择分支
+changeFigure:none -left -next;
+choose:立刻装作在讨论工作:ch4_meeting_pretend_work.txt|躲到桌子下面:ch4_meeting_hide.txt|保持原状，看是谁:ch4_meeting_stay.txt;

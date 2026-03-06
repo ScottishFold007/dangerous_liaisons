@@ -1,0 +1,29 @@
+; 第一章：主动打招呼
+changeBg:office_room.png;
+bgm:work_busy.mp3;
+
+:你推开门，微笑着打招呼。;
+
+你:下午好。;
+
+:两个同事吓了一跳，脸色有些尴尬。;
+
+changeFigure:colleague_a_gossip.png -left;
+同事A:李、李总监好！;
+同事B:李总监下午好！;
+
+:气氛很尴尬。;
+
+你:继续聊，我只是路过。;
+
+:你倒了杯水，然后离开。;
+:身后传来窃窃私语的声音。;
+
+setVar:reputation=(reputation)-5;
+setVar:danger=(danger)+10;
+setVar:sanity=(sanity)+5;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch1_meeting.txt;

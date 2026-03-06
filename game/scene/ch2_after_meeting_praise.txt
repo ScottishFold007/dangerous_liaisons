@@ -1,0 +1,25 @@
+; 第二章 - 会议后：陈薇的赞赏
+changeBg:office_corridor.png -next;
+bgm:gentle_moment.mp3;
+
+:会议结束后，你回到办公室。;
+:刚坐下，手机就收到了一条消息。;
+
+; 手机消息效果
+miniAvatar:chenwei_avatar.png -left;
+陈薇（短信）:李总监，刚才会议上的表现不错。;
+陈薇（短信）:我欣赏有魄力的人。;
+陈薇（短信）:晚上有空吗？我想和你详细讨论一下新方案。;
+miniAvatar:none;
+
+:（她这是...工作邀请？）;
+:（还是...）;
+
+:你看了看时间，已经下午5点了。;
+:如果答应她，今晚可能要加班到很晚。;
+:但这也是一个和她单独相处的机会。;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:ch2_work_hard.txt;

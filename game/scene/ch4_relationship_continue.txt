@@ -1,0 +1,29 @@
+; 第四章 - 关系继续
+changeBg:office_day.png -next;
+bgm:tension_theme.mp3;
+
+:虽然在公司里保持距离，但你们还是会在工作之外见面。;
+:周末，你去了她家。;
+:或者深夜，在那个酒吧。;
+
+:你们都知道这很危险。;
+:但就像飞蛾扑火，明知道会受伤，还是忍不住靠近。;
+
+:今天是周五下午。;
+:你收到了陈薇的邮件。;
+
+; 邮件
+miniAvatar:system_icon.png -left;
+陈薇（邮件）:李总监，请在下班前到我办公室汇报项目进度。——陈薇;
+miniAvatar:none;
+
+:看起来是正常的工作邮件。;
+:但你注意到，邮件最后有一个很小的符号：♥;
+
+:（她想见我。）;
+:（但现在这个时候...）;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:ch4_office_meeting.txt;

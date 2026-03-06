@@ -1,0 +1,29 @@
+; 第一章：暧昧回应
+changeBg:office_corridor.png;
+bgm:tension_intimate.mp3;
+
+你:取决于压力来自哪里。;
+
+changeFigure:chenwei_suit_dangerous_smile.png;
+
+:她的眼神变得锐利。;
+
+陈薇:你在暗示什么？;
+
+:气氛突然紧张起来。你意识到自己可能说错话了。;
+
+你:我是说...工作压力我都能应对。;
+
+陈薇:希望如此。;
+
+:她盯着你看了几秒。;
+
+setVar:affection=(affection)-5;
+setVar:sanity=(sanity)-8;
+setVar:danger=(danger)+12;
+setVar:reputation=(reputation)-3;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch1_office_intro.txt;

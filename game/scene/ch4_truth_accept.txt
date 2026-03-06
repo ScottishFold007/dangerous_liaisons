@@ -1,0 +1,31 @@
+; 第四章 - 真相：接受
+changeBg:villa_living_room.png;
+bgm:revelation_theme.mp3;
+
+你:我接受你，包括你的选择。;
+
+changeFigure:chenwei_casual_touched.png -left;
+
+:她的眼眶红了。;
+
+陈薇:你...你不觉得我很虚伪吗？;
+
+你:每个人都有自己的难处。;
+你:我不会评判你的选择。;
+
+陈薇:李昂...;
+
+:她拥抱了你。;
+
+陈薇:谢谢你。;
+陈薇:谢谢你愿意理解我。;
+
+; 数值变化
+setVar:affection=(affection)+30;
+setVar:know_secret=1;
+setVar:sanity=(sanity)-10;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch4_villa_end.txt;

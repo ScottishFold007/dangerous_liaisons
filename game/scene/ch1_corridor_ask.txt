@@ -1,0 +1,34 @@
+; 第一章：追问细节
+changeBg:office_corridor.png;
+bgm:tension_intimate.mp3;
+
+你:上一任总监...发生了什么？;
+
+changeFigure:chenwei_suit_serious.png;
+
+:她似乎没料到你会问这个。;
+
+陈薇:你很敏锐。;
+
+:她沉默了几秒，像在斟酌要说多少。;
+
+陈薇:他能力很强，但...不懂分寸。在公司里做了不该做的事。;
+
+:她没有继续说下去，但你明白了——这是警告。;
+
+陈薇:在职场上，能力重要，但更重要的是...知道界限在哪里。;
+
+:她看着你，眼神意味深长。;
+
+陈薇:你明白我的意思吗？;
+
+setVar:sanity=(sanity)+10;
+setVar:affection=(affection)+8;
+setVar:reputation=(reputation)+5;
+setVar:danger=(danger)+5;
+setVar:know_secret=1;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch1_office_intro.txt;

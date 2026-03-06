@@ -1,0 +1,30 @@
+; 第一章：解释（BE触发）💀
+changeBg:office_room.png -next;
+bgm:calm_office.mp3;
+
+你:我只是想说，我不会告诉任何人。;
+
+changeFigure:chenwei_suit_angry.png -next;
+
+:她的眼神彻底冷了下来。;
+
+陈薇:所以你是在向我保证你会保守秘密？;
+
+你:我...;
+
+陈薇:这听起来像威胁，李总监。;
+
+:她拿出手机，拨了个号码。;
+
+陈薇:王经理，李总监不适合我们公司。办理离职手续。;
+
+:她挂断电话，看着你震惊的表情。;
+
+陈薇:我不需要会威胁我的员工。;
+
+playEffect:game_over_sound.wav;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:END_BE1_FIRED.txt;

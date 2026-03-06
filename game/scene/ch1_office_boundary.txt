@@ -1,0 +1,28 @@
+; 第一章：强调界限
+changeBg:office_room.png;
+bgm:calm_office.mp3;
+
+你:我明白。工作和私人生活应该分开。;
+
+changeFigure:chenwei_suit_disappointed.png;
+
+:她的表情变得冷淡。;
+
+陈薇:很好。看来你很清楚自己的立场。;
+
+:气氛突然变冷了。;
+
+陈薇:下午三点，会议室。准备好你的项目方案。;
+
+:她转身离开，没有再多说一句话。;
+:你站在办公室里，不确定自己是做对了还是做错了。;
+
+setVar:affection=(affection)-12;
+setVar:sanity=(sanity)+15;
+setVar:reputation=(reputation)+10;
+setVar:danger=(danger)-5;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch1_work_start.txt;

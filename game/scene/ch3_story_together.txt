@@ -1,0 +1,32 @@
+; 第三章 - 故事：一起面对
+changeBg:bar_night.png;
+bgm:dark_theme.mp3;
+
+你:我也不知道未来会怎样，但我愿意和你一起面对。;
+
+:她的眼眶红了。;
+bgm:BY2_aiyaaiya.mp3;
+changeFigure:chenwei_casual_touched.png -left;
+陈薇:一起面对...;
+
+:她握紧你的手。;
+
+陈薇:好。;
+
+:她靠在你肩上。;
+
+陈薇:李昂，谢谢你。;
+陈薇:谢谢你愿意听我说这些。;
+
+:你们就这样坐着，很久没有说话。;
+:但这种沉默，很温暖。;
+
+; 数值变化
+setVar:affection=(affection)+25;
+setVar:sanity=(sanity)+10;
+setVar:danger=(danger)+15;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch3_bar_end.txt;

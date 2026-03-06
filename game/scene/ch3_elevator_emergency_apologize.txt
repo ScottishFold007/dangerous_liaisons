@@ -1,0 +1,38 @@
+; 第三章 - 紧急按钮：道歉
+changeBg:elevator.png;
+bgm:tension_subtle.mp3;
+
+你:对不起，我太冲动了。;
+
+:你立刻按下恢复按钮。;
+:电梯继续上升。;
+
+changeFigure:chenwei_suit_angry.png -left;
+陈薇:李昂，你差点害死我们两个。;
+
+:她的声音在颤抖，不知道是气的还是吓的。;
+
+陈薇:监控室的人现在肯定在看。;
+陈薇:我会说是误触。但你...最好祈祷他们相信。;
+
+:电梯到了20楼。;
+playEffect:elevator_door.mp3;
+:门开了，她快步走出去。;
+
+; 数值变化 - 严重惩罚（按紧急按钮已被监控看到）
+setVar:affection=(affection)-15;
+setVar:sanity=(sanity)-20;
+setVar:danger=(danger)+50;
+setVar:impulsive=1;
+setVar:reputation=(reputation)-15;
+
+; 边界保护
+setVar:danger=100 -when=danger>100;
+
+; 成就
+intro:💀 成就解锁："作死小能手" -fontSize=large -backgroundColor=rgba(0,0,0,0.9) -fontColor=rgba(255,69,0,1) -hold;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch3_daily_continue.txt;

@@ -1,0 +1,23 @@
+; 第三章 - 独自结束
+changeBg:bar_night.png -next;
+bgm:陈楚生-有没有人告诉你.mp3;
+
+:她走了。;
+:你坐在吧台前，看着空荡荡的座位。;
+
+:（我做对了吗？）;
+:（保持距离，是为了保护她，还是保护我自己？）;
+
+:调酒师走过来。;
+
+changeFigure:bartender_uniform_professional.png -right;
+调酒师:先生，还要喝吗？;
+
+你:不了，谢谢。;
+
+:你付了钱，离开了酒吧。;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:ch3_end.txt;

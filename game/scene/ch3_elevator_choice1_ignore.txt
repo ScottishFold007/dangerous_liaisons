@@ -1,0 +1,26 @@
+; 第三章 - 电梯选择1：保持不动
+changeBg:elevator.png;
+bgm:tension_subtle.mp3;
+
+:你保持不动，装作没注意到。;
+:电梯继续上升。;
+
+:她收回了手，轻轻叹了口气。;
+
+changeFigure:chenwei_suit_disappointed.png -left;
+陈薇:李总监，有时候...;
+陈薇:机会错过了，就不会再有了。;
+
+:电梯到了20楼。;
+playEffect:elevator_door.mp3;
+:门开了，她先走了出去，没有回头。;
+
+; 数值变化
+setVar:affection=(affection)-10;
+setVar:sanity=(sanity)+10;
+setVar:danger=(danger)-5;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch3_daily_continue.txt;

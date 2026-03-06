@@ -1,0 +1,35 @@
+; 第三章 - 日常选择2：反问
+changeBg:office_desk.png -next;
+bgm:calm_office.mp3;
+
+你:为什么这么问？;
+
+changeFigure:xiaowang_staff_nervous.png -left;
+小王:没什么，就是...公司里有些传言。;
+
+你:什么传言？;
+
+小王:说您是陈总的...关系户。;
+
+:你的脸色变了。;
+
+你:谁说的？;
+
+小王:我也不知道，就是听说的。李总监，您别介意...;
+
+:他匆匆离开了。;
+:你坐在椅子上，心情沉重。;
+
+:（流言已经开始了...）;
+:（这才第三周...）;
+
+; 数值变化
+setVar:reputation=(reputation)-15;
+setVar:danger=(danger)+25;
+setVar:sanity=(sanity)-5;
+setVar:suspected=1;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:ch3_daily_scene2.txt;

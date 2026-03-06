@@ -1,0 +1,26 @@
+; 第一章：会议准备
+
+changeBg:office_room.png -next;
+bgm:work_busy.mp3;
+
+:你整理好项目方案，准备去会议室。;
+:这五个小时，你查阅了公司的所有资料，分析了市场数据，制定了详细的方案。;
+
+:（这是我证明自己的机会。）;
+:（不能搞砸。）;
+
+:路过茶水间时，听到里面有人在说话。;
+
+changeFigure:colleague_a_gossip.png -left;
+同事A:听说新来的项目总监是陈总亲自面试的。;
+同事B:啧啧，长得挺帅的。难怪陈总看上...哦不，看重他。;
+同事A:小声点！上一个项目总监就是因为和陈总...;
+同事B:嘘！;
+
+:你的脚步停住了。;
+:他们在说什么？上一个项目总监和陈总怎么了？;
+
+; 清除立绘后进入选择
+changeFigure:none -left -next;
+
+choose:装作没听见，直接走过去:ch1_gossip_ignore.txt|停下来，继续听:ch1_gossip_listen.txt|推门进去，打个招呼:ch1_gossip_greet.txt;

@@ -1,0 +1,52 @@
+; 序章：清晨
+
+changeBg:black.png -next -transform={"brightness":1.3,"blur":3};
+bgm:none;
+
+; 温暖清晨 —— 画面从模糊暗淡渐渐清晰温暖
+setAnimation:slow-fade-warm -target=bg-main;
+
+:那一夜，你们都在寻求慰藉。;
+:两个陌生人，在城市的夜晚，短暂地拥抱彼此。;
+:没有名字，没有承诺，只有此刻的温暖。;
+
+:清晨，你醒来时，她已经离开了。;
+:床头柜上只有一张便签。;
+
+intro:谢谢你的陪伴。|忘记昨晚吧，我们都需要继续生活。|——一个陌生人;
+
+:你看着那张便签，心里有些复杂。;
+
+:（也许她说得对。）;
+:（这只是一个意外，一个不会再有交集的夜晚。）;
+:（我该继续找工作了。）;
+
+:你收拾好东西，开始新的一天。;
+:三天后，你收到了一家公司的面试通知。;
+:五天后，你通过了面试。;
+:一周后，你入职了。;
+
+:你以为，那一夜只是人生的一个小插曲。;
+:但你不知道...;
+:命运，已经悄悄改变了轨迹。;
+
+intro:一周后|入职第一天;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+
+; 边界保护 - 确保所有变量在合法范围内
+setVar:affection=0 -when=affection<0;
+setVar:affection=100 -when=affection>100;
+setVar:sanity=0 -when=sanity<0;
+setVar:sanity=100 -when=sanity>100;
+setVar:reputation=0 -when=reputation<0;
+setVar:reputation=100 -when=reputation>100;
+setVar:danger=0 -when=danger<0;
+setVar:danger=100 -when=danger>100;
+
+; 序章结束 - 状态卡片
+intro:【序章结束】|好感度：{affection}|理智值：{sanity}|职业声誉：{reputation}|危险指数：{danger} -fontSize=medium -backgroundColor=rgba(0,0,0,0.85) -fontColor=rgba(255,255,255,1) -hold;
+
+changeScene:ch1_start.txt;

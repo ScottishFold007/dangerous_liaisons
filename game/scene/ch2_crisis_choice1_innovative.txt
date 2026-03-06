@@ -1,0 +1,42 @@
+; 第二章 - 危机选择1：大胆创新
+changeBg:office_meeting.png;
+bgm:tense_meeting.mp3;
+
+你:我认为，既然客户觉得不够大胆，那我们就应该推翻重做。;
+你:给他们一个真正震撼的方案。;
+
+:会议室里一片寂静。;
+:有人露出了惊讶的表情。;
+
+changeFigure:chenwei_suit_thinking.png -left;
+陈薇:推翻重做？;
+陈薇:李总监，你知道这意味着什么吗？;
+陈薇:我们只有三天时间。;
+
+你:我知道。但如果只是小修小补，客户不会满意的。;
+你:与其做一个平庸的方案，不如赌一把。;
+
+:陈薇盯着你看了几秒钟。;
+:然后，她笑了。;
+
+changeFigure:chenwei_suit_smile.png -left;
+陈薇:好。我喜欢有魄力的人。;
+陈薇:那就按你说的做。;
+陈薇:但是，李总监...;
+陈薇:如果失败了，你要负全责。;
+
+你:我明白。;
+
+; 数值变化
+setVar:reputation=(reputation)+20;
+setVar:affection=(affection)+15;
+setVar:sanity=(sanity)-10;
+setVar:danger=(danger)+10;
+
+:会议结束后，同事们都用复杂的眼神看着你。;
+:有人佩服你的勇气，有人觉得你太冒险。;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch2_after_meeting_praise.txt;

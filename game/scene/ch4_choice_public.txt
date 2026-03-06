@@ -1,0 +1,35 @@
+; 第四章 - 选择：公开
+changeBg:meeting_room_dark.png;
+bgm:serious_theme.mp3;
+
+你:我选择公开。我们一起面对。;
+
+:她的眼眶红了。;
+
+changeFigure:chenwei_casual_shirt_touched.png -left;
+陈薇:你确定？;
+
+你:确定。;
+
+陈薇:你知道这意味着什么吗？;
+
+你:我知道。但我不想再躲了。;
+
+:她抱住你。;
+
+陈薇:傻瓜...;
+
+:她的声音有些哽咽。;
+
+陈薇:好。那我们周一就公开。;
+
+; 数值变化
+setVar:affection=(affection)+30;
+setVar:danger=(danger)+40;
+setVar:sanity=(sanity)-15;
+setVar:public_rel=1;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch5_start.txt;

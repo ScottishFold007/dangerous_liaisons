@@ -1,0 +1,113 @@
+; 第三章 - 电梯场景（冷淡变体）
+; 当danger>40时触发：陈薇刻意保持距离
+changeBg:elevator.png;
+bgm:tension_subtle.mp3;
+playEffect:elevator_door.mp3;
+
+:电梯门关上，只剩你们两人。;
+
+changeFigure:chenwei_suit_calm.png -left;
+:她站在电梯另一侧，保持着明显的距离。;
+:表情淡淡的，目视前方。;
+
+:（她今天...好像刻意在躲我。）;
+
+陈薇:李总监。;
+
+:她的称呼变了。不是"李昂"，而是"李总监"。;
+:（为什么？发生了什么？）;
+
+你:陈总，早上好。;
+
+:电梯缓缓上升。;
+:从1楼到20楼，大约需要40秒。;
+:这40秒，安静得让人窒息。;
+
+:她没有看你，也没有说话。;
+:手里攥着文件夹，指节发白。;
+
+:（她在刻意保持距离。）;
+:（是因为公司里的流言？）;
+:（还是...有人跟她说了什么？）;
+
+:电梯显示：10楼。;
+:还有30秒。;
+
+; 选择分支——冷淡变体中减少亲密选项
+changeFigure:none -left;
+choose:保持沉默，尊重她的距离:cold_silence|陈总，最近...工作还顺利吗？:cold_work|🔥是不是发生了什么事？:cold_ask;
+
+; ===== 选择1：保持沉默 =====
+label:cold_silence;
+
+:你选择什么都不说。;
+:电梯里只有机械运转的嗡嗡声。;
+
+:20楼到了。;
+:门开的一瞬间，她快步走出去，没有回头。;
+
+:（...果然是在躲我。）;
+
+setVar:sanity=(sanity)+5;
+setVar:danger=(danger)-5;
+
+jumpLabel:cold_converge;
+
+; ===== 选择2：公事公办 =====
+label:cold_work;
+
+你:陈总，最近项目进展不错，下周的汇报方案我已经准备好了。;
+
+changeFigure:chenwei_suit_calm.png -left;
+:她终于看了你一眼。;
+:但目光很快移开。;
+
+陈薇:好。发给我看看。;
+
+:简短、客气、公事公办。;
+:像对待一个普通下属。;
+
+:（她在划清界限。）;
+
+setVar:reputation=(reputation)+3;
+
+jumpLabel:cold_converge;
+
+; ===== 选择3：直接追问 =====
+label:cold_ask;
+
+你:陈总...是不是发生了什么事？;
+
+:她的脚步顿了一下。;
+:然后继续往前走。;
+
+陈薇:没有。;
+
+:两个字，轻得像风。;
+
+陈薇:李总监，以后在公司...注意分寸。;
+
+:她头也不回地走向了CEO办公室。;
+:走廊里只剩你一个人。;
+
+:（注意分寸...）;
+:（她是在保护我，还是在推开我？）;
+
+setVar:affection=(affection)-5;
+setVar:danger=(danger)-3;
+
+jumpLabel:cold_converge;
+
+; ===== 汇合点 =====
+label:cold_converge;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+
+:回到办公室，你心里多了一块石头。;
+:（她的态度变化...不会无缘无故的。）;
+:（一定是有人做了什么，或者说了什么。）;
+
+; 汇入正常第三章流程
+changeScene:ch3_daily_continue.txt;

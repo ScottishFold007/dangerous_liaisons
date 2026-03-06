@@ -1,0 +1,23 @@
+; 第一章：回避
+changeBg:office_room.png;
+bgm:work_busy.mp3;
+
+你:我...我马上去会议室。;
+
+changeFigure:chenwei_suit_thoughtful.png;
+
+:她看了你一眼，没有说话。;
+:几秒钟的沉默让你如坐针毡。;
+
+陈薇:走吧，一起去。;
+
+:她没有追问，但你知道她心里有数。;
+
+setVar:sanity=(sanity)+5;
+setVar:reputation=(reputation)-5;
+setVar:danger=(danger)+8;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch1_meeting.txt;

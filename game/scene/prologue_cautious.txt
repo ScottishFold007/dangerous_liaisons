@@ -1,0 +1,41 @@
+; 序章：谨慎性格分支
+changeBg:bar_night.png -next;
+bgm:jazz_bar_melancholy.mp3;
+
+:你继续喝自己的酒，但余光一直注意着她。;
+:她又点了一杯，调酒师似乎有些担心。;
+
+changeFigure:bartender_uniform_professional.png -right;
+调酒师:小姐，您已经喝了不少了...;
+陈薇:我知道自己在做什么。;
+
+:她的语气很冷，但声音有些颤抖。;
+:调酒师看了看你，又看了看她，最后还是倒了酒。;
+
+:几分钟后，她突然开口。;
+
+陈薇:你也是一个人？;
+
+:她没有看你，只是盯着自己的酒杯。;
+
+你:是的。;
+陈薇:失恋？失业？还是...失去了什么重要的东西？;
+你:失业。你呢？;
+
+changeFigure:chenwei_casual_sad.png -left;
+
+:她终于转过头，看着你。;
+
+陈薇:失去了...对某些事情的信任。;
+
+:她的眼神很复杂，有疲惫，有愤怒，还有一丝脆弱。;
+
+陈薇:要不要一起喝？至少，今晚不用一个人。;
+
+setVar:personality=cautious;
+setVar:sanity=(sanity)+5;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:prologue_conversation.txt;

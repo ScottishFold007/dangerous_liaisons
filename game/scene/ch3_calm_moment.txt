@@ -1,0 +1,41 @@
+; 第三章 - 暴风雨前的宁静
+changeBg:office_evening.png -next;
+bgm:gentle_moment.mp3;
+unlockBgm:gentle_moment.mp3 -name=温柔时刻 -series=温情;
+
+:周五下午五点半。;
+:你正准备再加一会儿班。;
+
+playEffect:knock_door.mp3;
+
+changeFigure:chenwei_casual_gentle.png -left;
+
+:陈薇靠在你的办公室门框上。;
+:她今天穿了一件浅蓝色的针织衫，不是平时的职业套装。;
+
+陈薇:今天不加班了。;
+
+你:太阳打西边出来了？;
+
+陈薇:我在想...这样的日子挺好的。;
+陈薇:上班能看到你，下班...也能看到你。;
+陈薇:虽然得偷偷摸摸的。;
+
+:她笑了，笑得很放松。;
+:那是你第一次看到她完全卸下CEO的盔甲。;
+
+:（如果时间能停在这一刻就好了。）;
+
+陈薇:周末...要不要去别墅？;
+陈薇:就我们两个。没有工作，没有会议，没有...别人的眼光。;
+
+:你看着窗外的夕阳。;
+:城市被镀了一层金色。;
+
+:（这一刻太美好了。）;
+:（美好到让人有点不安。）;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:ch4_start.txt;

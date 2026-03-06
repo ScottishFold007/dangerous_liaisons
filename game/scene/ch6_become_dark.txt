@@ -1,0 +1,17 @@
+; 第六章 - 进入黑暗
+changeBg:office_ceo.png -next;
+bgm:confrontation_climax.mp3;
+
+你:我愿意。;
+
+changeFigure:chenwei_suit_cold_smile.png -left;
+陈薇:好。;
+
+:她拿起电话。;
+
+陈薇:王律师，把老刘的材料发给纪委。;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:ch6_ending_router.txt;

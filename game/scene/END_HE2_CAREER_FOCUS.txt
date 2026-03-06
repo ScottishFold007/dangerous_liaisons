@@ -1,0 +1,65 @@
+;完美结局2：理性升职
+pixiInit;
+pixiPerform:cherryBlossoms;
+changeBg:black.png -next;
+bgm:Take_me_hand.mp3;
+unlockBgm:Take_me_hand.mp3 -name=Take me hand -series=结局;
+
+; 结局标题
+intro:【完美结局：理性升职】 -fontSize=large -backgroundColor=rgba(0,0,0,1) -fontColor=rgba(255,215,0,1) -hold;
+
+changeBg:office_desk.png -next;
+
+:你做出了选择。;
+:在辞职信上，你写道："因个人原因，申请离职。" -when=public_rel==0;
+:这场风波过后，你的能力被所有人看在眼里。 -when=public_rel==1;
+
+:陈薇的危机解除了。;
+:董事会认为，既然你已经离职，就没有必要追究了。 -when=public_rel==0;
+:董事会对你的表现给予了高度评价。 -when=public_rel==1;
+:她依然是那个雷厉风行的CEO。;
+
+:而你，凭借在陈薇公司积累的经验，;
+:很快在另一家公司找到了更好的职位。 -when=public_rel==0;
+:很快被提拔为副总裁候选人。 -when=public_rel==1;
+:项目总监，年薪翻倍。 -when=public_rel==0;
+:薪资和地位都更上一层楼。 -when=public_rel==1;
+
+; 时间跳跃
+changeBg:black.png -next;
+intro:半年后... -hold;
+
+; 叙述
+changeBg:apartment_night.png -next;
+bgm:romantic_theme.mp3;
+playEffect:phone_ring.wav;
+:周五晚上，你的手机响了。;
+
+陈薇（电话）:下班了吗？;
+
+你:刚下班。;
+
+陈薇（电话）:来我家，我做了晚饭。;
+
+:你们的关系没有结束，只是换了一种方式继续。;
+:不再是上下级，而是平等的恋人。 -when=public_rel==0;
+:经历了风雨，你们的感情更加坚固。 -when=public_rel==1;
+
+; 时间跳跃
+changeBg:black.png -next;
+intro:两年后... -hold;
+
+; 结局总结
+changeBg:ending_he2.png -next -transform={"godrayFilm":1,"brightness":1.1};
+unlockCg:ending_he2.png -name=理性升职 -series=7;
+
+; 结局落幕 —— 电影感回顾
+setAnimation:ending-cinematic -target=bg-main -next;
+
+intro:你选择了牺牲，但反而获得了更好的发展。|有时候，放手不是失去，而是为了更好的未来。|陈薇也因为你的牺牲更加珍惜这段感情。|两年后，你们结婚了。 -fontSize=medium -backgroundColor=rgba(0,0,0,0.9) -fontColor=rgba(255,255,255,1) -hold -when=public_rel==0;
+intro:你用实力证明了自己，也赢得了所有人的尊重。|有时候，最好的选择就是做好自己。|陈薇因为你的担当更加爱你。|两年后，你们结婚了。 -fontSize=medium -backgroundColor=rgba(0,0,0,0.9) -fontColor=rgba(255,255,255,1) -hold -when=public_rel==1;
+
+; 统计信息
+intro:完成度：100%|解锁：HE2结局|成就：理智的爱 -fontSize=medium -backgroundColor=rgba(0,0,0,0.9) -fontColor=rgba(255,215,0,1) -hold;
+pixiInit;
+end;

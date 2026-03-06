@@ -1,0 +1,30 @@
+; 第二章：项目危机
+
+changeBg:office_room.png -next;
+bgm:urgent_theme.mp3;
+unlockBgm:urgent_theme.mp3 -name=危机四伏 -series=危机;
+
+:正常的一天，突然被打破了。;
+
+playEffect:phone_ring.wav;
+
+:你的电话响了，是王经理。;
+
+王经理:李总监，出大事了！客户突然要求修改方案，否则撤资！;
+你:什么？！;
+王经理:陈总召集紧急会议，十分钟后会议室见！;
+
+; 危机画面 —— 画面故障闪烁
+setAnimation:crisis-glitch -target=bg-main -next;
+
+playEffect:heartbeat_fast.mp3;
+:你挂断电话，心跳加速。;
+:这是你入职以来的第一次危机。;
+
+:（冷静。）;
+:（这是证明自己的机会。）;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:ch2_emergency_meeting.txt;

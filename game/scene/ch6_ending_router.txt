@@ -1,0 +1,33 @@
+; ===== 结局路由引擎 =====
+; 基于变量累积值决定最终结局
+; 优先级从高到低：坏结局 > 隐藏结局 > 好结局
+
+; --- 边界保护（防止变量越界导致判断异常）---
+setVar:affection=0 -when=affection<0;
+setVar:affection=100 -when=affection>100;
+setVar:danger=0 -when=danger<0;
+setVar:danger=100 -when=danger>100;
+setVar:sanity=0 -when=sanity<0;
+setVar:sanity=100 -when=sanity>100;
+setVar:reputation=0 -when=reputation<0;
+setVar:reputation=100 -when=reputation>100;
+
+; --- BE1：职场出局 (reputation崩塌 或 danger爆表) ---
+changeScene:END_BE1_FIRED.txt -when=reputation<30;
+changeScene:END_BE1_FIRED.txt -when=danger>80;
+
+; --- BE3：关系曝光 (danger过高 且 reputation不够护体) ---
+changeScene:END_BE3_EXPOSED.txt -when=danger>60;
+
+; --- BE2：感情破裂 (好感太低) ---
+changeScene:END_BE2_BREAKUP.txt -when=affection<20;
+
+; --- HIDDEN：权力棋子 (sanity极低 — 到这里已排除了BE1/BE2/BE3，
+;     说明好感>=20, danger<=80, reputation>=30) ---
+changeScene:END_HIDDEN_POWER_GAME.txt -when=sanity<30;
+
+; --- HE2：理性升职 (reputation高) ---
+changeScene:END_HE2_CAREER_FOCUS.txt -when=reputation>=70;
+
+; --- HE1：公开恋情 (默认好结局) ---
+changeScene:END_HE1_PUBLIC_LOVE.txt;

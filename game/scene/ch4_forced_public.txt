@@ -1,0 +1,28 @@
+; 第四章 - 被迫选择：公开
+changeBg:meeting_room_dark.png;
+bgm:serious_theme.mp3;
+
+你:那就公开吧。;
+
+changeFigure:chenwei_casual_shirt_cold.png -left;
+陈薇:你是真心的，还是被我逼的？;
+
+你:我...;
+
+陈薇:算了，不用回答了。;
+
+:她的语气很冷。;
+
+陈薇:周一，我会公开。;
+陈薇:至于你...做好心理准备吧。;
+
+; 数值变化
+setVar:affection=(affection)-10;
+setVar:danger=(danger)+40;
+setVar:sanity=(sanity)-10;
+setVar:public_rel=1;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch5_start.txt;

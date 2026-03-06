@@ -1,0 +1,40 @@
+; 第二章：职场试炼
+
+changeBg:black.png;
+bgm:none;
+
+intro:一周后;
+
+:入职一周了。;
+:你已经逐渐适应了新工作。;
+:项目进展顺利，同事关系也还不错。;
+:但你和陈薇的关系，变得越来越微妙。;
+
+; personality差异：面对工作压力的内心反应
+:（说实话，工作压力不小。但这种被需要的感觉...挺好的。） -when=personality==outgoing;
+:（工作上要小心，和陈薇的关系更要小心。不能让人抓到把柄。） -when=personality==cautious;
+:（工作就是工作。至于陈薇...走一步看一步吧。） -when=personality==cold;
+
+:那天晚上，你没有去她说的"聊聊工作"。;
+:你发了一条短信："抱歉，今晚有事。";
+miniAvatar:chenwei_avatar.png -left;
+陈薇（短信）:"好。";
+miniAvatar:none;
+:之后的一周，你们只在工作场合见面。;
+:她依然是那个雷厉风行的CEO，对你的要求很严格。;
+:但有时候，你会在电梯里遇到她。;
+:她会公事公办地点头，但眼神里有别的东西。;
+
+:每天晚上，你会收到她的邮件。;
+:有时是工作，有时是...暧昧的问候。;
+
+miniAvatar:system_icon.png -left;
+intro:发件人：陈薇|主题：辛苦了||李总监，||今天的报告做得很好。||早点休息。||——陈薇||P.S. 记得吃晚饭。;
+miniAvatar:none;
+:（她在试探我？）;
+:（还是...她也在犹豫？）;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch2_project_crisis.txt;

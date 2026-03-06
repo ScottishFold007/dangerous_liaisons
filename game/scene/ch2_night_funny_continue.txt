@@ -1,0 +1,55 @@
+; 第二章 - 外卖暖男：温馨聊天
+changeBg:office_night_cozy.png;
+bgm:warm_night.mp3;
+
+:你们坐在办公室里，吃着外卖。;
+:气氛出奇地轻松。;
+
+changeFigure:chenwei_casual_relaxed.png -left;
+陈薇:你知道吗？我已经很久...没有这样轻松过了。;
+
+你:什么样？;
+
+陈薇:不用装，不用算计，不用时刻保持强势。;
+
+:她看着你。;
+
+陈薇:和你在一起，我可以做回普通的陈薇。;
+
+你:那就...多做回自己吧。;
+
+陈薇:嗯。;
+
+:那一夜，你们聊了很多。;
+:关于工作，关于生活，关于梦想。;
+:没有暧昧，没有试探，只有两个疲惫的人，短暂的放松。;
+
+陈薇:李昂，谢谢你。;
+
+你:谢什么？;
+
+陈薇:谢谢你...让我想起来，我也可以是个普通女人。;
+
+:她的眼神很温柔。;
+
+陈薇:不是CEO，不是女强人，只是...陈薇。;
+
+你:你一直都是陈薇。;
+
+changeFigure:chenwei_casual_smile.png -left;
+
+:她笑了，那笑容很真实。;
+
+; 数值变化
+setVar:affection=(affection)+25;
+setVar:sanity=(sanity)+10;
+setVar:danger=(danger)+5;
+setVar:reputation=(reputation)+5;
+
+; 成就提示
+intro:🏆 成就解锁：暖男|用外卖征服女总裁的心 -fontSize=large -backgroundColor=rgba(0,0,0,0.9) -fontColor=rgba(255,215,0,1) -hold;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch2_end.txt;

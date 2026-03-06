@@ -1,0 +1,40 @@
+; 第三章 - 日常场景1：同事的怀疑
+changeBg:office_desk.png;
+bgm:calm_office.mp3;
+
+:今天是周五，下午三点。;
+:你正在整理这周的工作报告。;
+
+playEffect:knock_door.mp3;
+
+:有人敲门。;
+
+; suspected时：同事的态度更加试探
+:（最近办公室的气氛不太对...好像每个人看我的眼神都怪怪的。） -when=suspected==1;
+
+你:请进。;
+
+:进来的是市场部的小王，二十多岁，看起来有些紧张。;
+
+changeFigure:xiaowang_staff_nervous.png -left;
+小王:李总监，打扰了。;
+
+你:什么事？;
+
+小王:我...我想请教一个问题。;
+
+:他犹豫了一下。;
+
+小王:您和陈总...关系很好吗？;
+
+:你的心一紧。;
+
+; suspected时：内心反应更警觉
+:（又来了。自从那件事之后，总有人旁敲侧击。） -when=suspected==1;
+
+:（他为什么这么问？） -when=suspected==0;
+:（是察觉到了什么，还是只是好奇？）;
+
+; 选择分支
+changeFigure:none -left;
+choose:还好，正常的上下级关系:ch3_daily_choice1_deny.txt|为什么这么问？:ch3_daily_choice2_ask.txt|你想说什么？:ch3_daily_choice3_direct.txt;

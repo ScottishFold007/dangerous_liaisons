@@ -1,0 +1,42 @@
+; 第三章 - 电梯场景
+changeBg:elevator.png;
+bgm:tension_subtle.mp3;
+playEffect:elevator_door.mp3;
+
+:电梯门关上，只剩你们两人。;
+
+changeFigure:chenwei_suit_calm.png -left;
+:她站在你旁边，距离很近。;
+:能闻到她身上淡淡的香水味。;
+
+陈薇:昨晚睡得好吗？;
+
+你:还好。;
+
+:电梯缓缓上升。;
+:从1楼到20楼，大约需要40秒。;
+
+; 心跳加速 —— 电梯里的暧昧
+setAnimation:heartbeat-pulse -target=fig-left;
+
+:突然，她的手指轻轻碰了碰你的手。;
+:就一下，像是不经意的。;
+:但你知道，这不是意外。;
+
+:她的指尖很凉。;
+:而你的手心在出汗。;
+
+:（她在...试探我？）;
+:（还是...邀请我？）;
+
+; personality差异：电梯偶遇时的内心想法
+:（管她呢！心动就行动！） -when=personality==outgoing;
+:（冷静...这是在公司电梯里，万一有监控...） -when=personality==cautious;
+:（无所谓。她碰就碰了，又不会少块肉。） -when=personality==cold;
+
+:电梯显示：10楼。;
+:还有30秒。;
+
+; 选择分支
+changeFigure:none -left;
+choose:保持不动，装作没注意到:ch3_elevator_choice1_ignore.txt|轻轻握住她的手:ch3_elevator_choice2_hold.txt|🔥按下紧急停止按钮:ch3_elevator_choice3_emergency.txt|"陈总，您的手...碰到我了。":ch3_elevator_choice4_tease.txt;

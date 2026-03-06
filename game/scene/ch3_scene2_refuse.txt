@@ -1,0 +1,24 @@
+; 第三章 - 场景2：拒绝邀约
+changeBg:office_evening.png;
+bgm:evening_theme.mp3;
+
+; 短信回复
+miniAvatar:chenwei_avatar.png -left;
+你（短信）:抱歉，今晚有事。;
+miniAvatar:none;
+
+:发送后，你等了很久。;
+:她没有回复。;
+
+:（她会生气吗？）;
+:（但现在这个时候，确实不适合见面...）;
+
+; 数值变化
+setVar:affection=(affection)-10;
+setVar:sanity=(sanity)+10;
+setVar:danger=(danger)-5;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch3_weekend.txt;

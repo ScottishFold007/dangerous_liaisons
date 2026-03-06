@@ -1,0 +1,49 @@
+; 第五章 - 走廊：阴阳怪气
+changeBg:office_corridor.png;
+bgm:tension_subtle.mp3;
+
+你:还行，倒是刘经理您，眼袋这么重，周末加班了？;
+
+:走廊里安静了一秒。;
+:路过的同事脚步都慢了下来。;
+
+:老刘的笑容凝固了。;
+
+changeFigure:laoliu_smug.png -right;
+老刘:...什么？;
+
+你:没什么，就是关心一下老前辈的身体。;
+你:毕竟您年纪大了，要注意休息嘛。;
+
+:你露出一个无害的微笑。;
+
+:（好的，这话说完感觉很爽。）;
+:（但理性告诉我，这可能不太明智。）;
+
+:老刘脸色变了几变，最后挤出一个笑。;
+
+老刘:小李啊，嘴挺利的。;
+老刘:年轻人有锐气是好事，但别太锋利了。;
+老刘:容易...伤到自己。;
+
+:他意味深长地看了你一眼，转身走了。;
+
+:旁边市场部的小张目瞪口呆地看着这一幕。;
+:你冲他点了点头，若无其事地继续走。;
+
+:（行，这仇算是结下了。）;
+:（但看他那个表情，值了。）;
+:（替天下所有被老油条阴阳怪气过的打工人出口气。）;
+
+; 数值变化
+setVar:affection=(affection)+5;
+setVar:danger=(danger)+10;
+setVar:reputation=(reputation)-5;
+
+; 成就
+intro:🏆 成就解锁：嘴替|替所有打工人说出了心里话 -fontSize=large -backgroundColor=rgba(0,0,0,0.9) -fontColor=rgba(255,215,0,1) -hold;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch5_strategy.txt;

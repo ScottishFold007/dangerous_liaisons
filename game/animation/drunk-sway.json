@@ -1,0 +1,25 @@
+[
+  {
+    "duration": 0
+  },
+  {
+    "rotation": 0.03,
+    "blur": 3,
+    "duration": 600
+  },
+  {
+    "rotation": -0.03,
+    "blur": 5,
+    "duration": 600
+  },
+  {
+    "rotation": 0.02,
+    "blur": 3,
+    "duration": 500
+  },
+  {
+    "rotation": 0,
+    "blur": 0,
+    "duration": 800
+  }
+]

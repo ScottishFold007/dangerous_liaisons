@@ -1,0 +1,34 @@
+; 第三章 - 日常选择3：直接
+changeBg:office_desk.png;
+bgm:calm_office.mp3;
+
+你:你想说什么？;
+
+changeFigure:xiaowang_staff_serious.png -left;
+小王:我...我只是想提醒您。;
+小王:公司里有些人在说闲话，说您和陈总关系不一般。;
+
+你:然后呢？;
+
+小王:我觉得您应该小心一点。;
+小王:上一个项目总监就是因为...;
+
+:他没有说完，但你明白了。;
+
+你:谢谢你的提醒。;
+
+小王:不客气。我...我只是觉得您人不错，不想您出事。;
+
+:他离开了。;
+:你陷入沉思。;
+
+; 数值变化
+setVar:danger=(danger)+20;
+setVar:sanity=(sanity)+10;
+setVar:reputation=(reputation)-10;
+setVar:suspected=1;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch3_daily_scene2.txt;

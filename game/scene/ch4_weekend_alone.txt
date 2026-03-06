@@ -1,0 +1,17 @@
+; 第四章 - 独自周末
+changeBg:apartment_day.png -next;
+bgm:lonely_theme.mp3;
+
+:周末。;
+:你一个人待在家里。;
+:陈薇没有再联系你。;
+
+:周一，你回到公司。;
+:一切如常，但你和陈薇之间的距离越来越远。;
+
+:也许，这就是最好的结局。;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:END_BE2_BREAKUP.txt;

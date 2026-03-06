@@ -1,0 +1,43 @@
+; 第三章 - 紧急按钮：强吻 💀 BE触发
+changeBg:elevator.png -next;
+bgm:tension_subtle.mp3;
+
+你:我知道。但我想吻你。;
+
+:你靠近她。;
+
+changeFigure:chenwei_suit_shocked.png -left;
+陈薇:不要——;
+
+:但你还是吻了她。;
+
+changeBg:elevator.png -transform={"godrayFilm":1,"blur":3,"brightness":1.2} -next;
+unlockCg:elevator.png -name=电梯惊魂 -series=3;
+
+playEffect:alarm.mp3;
+
+:电梯警报响了。;
+:对讲机里传来保安的声音。;
+
+保安（对讲机）:20楼电梯，请问发生了什么？;
+
+:陈薇推开你，脸色铁青。;
+
+changeBg:elevator.png -transform={} -next;
+
+changeFigure:chenwei_suit_angry.png -left;
+陈薇:（对着对讲机）误触，马上恢复。;
+
+:她按下恢复按钮。;
+:电梯继续上升。;
+playEffect:elevator_door.mp3;
+:她转过身，眼神冰冷。;
+
+陈薇:你完了。;
+
+playEffect:game_over.mp3;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:END_BE3_EXPOSED.txt;

@@ -1,0 +1,24 @@
+; 坏结局1：职场出局
+pixiInit;
+pixiPerform:rain;
+changeBg:black.png -next -transform={"brightness":0.6,"saturation":0.3};
+bgm:sad_theme.mp3;
+unlockBgm:sad_theme.mp3 -name=遗憾终章 -series=离别;
+
+; 结局标题
+intro:【坏结局：职场出局】 -hold;
+
+:你在入职第一天就被开除了。;
+
+:原因：不懂分寸，触碰了不该触碰的红线。;
+
+:在职场权力游戏中，有些话永远不该说出口。;
+
+:即使你们曾经有过一夜，;
+:但在办公室里，她是CEO，你是员工。;
+
+:这个身份差距，比你想象的更重要。;
+
+intro:完成度：5%|解锁：BE1结局|提示：在职场上，要懂得分寸。 -hold;
+pixiInit;
+end;

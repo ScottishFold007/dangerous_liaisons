@@ -1,0 +1,51 @@
+; 第五章 - 周一危机
+changeBg:office_morning.png;
+bgm:tension_theme.mp3;
+
+:周一早上，你比平时早到了半小时。;
+:心里有些忐忑，但也有一种释然。;
+
+; public_rel：举报邮件的冲击感不同
+:（我们本来就打算公开了...但被人举报和主动公开，完全是两回事。） -when=public_rel==1;
+
+; impulsive：陈薇提及之前的冲动行为
+:（上次冲动的后果还没消化完...现在又来了。） -when=impulsive==1;
+
+:陈薇说，她会在上午十点召开全体员工大会。;
+:在会上公开你们的关系。;
+
+:你走进办公室，打开电脑。;
+:邮箱里有一封新邮件。;
+
+; 邮件内容
+miniAvatar:system_icon.png -left;
+邮件（董事会秘书）:各位董事、高管：;
+邮件（董事会秘书）:有人向董事会举报，CEO陈薇与下属李昂存在不正当关系。;
+邮件（董事会秘书）:董事会要求陈总在今天下午3点前给出解释。;
+
+; 危机冲击 —— 举报邮件的震撼
+setAnimation:crisis-glitch -target=bg-main;
+
+:你的心沉了下去。;
+miniAvatar:none;
+
+:（有人举报了...）;
+:（是谁？）;
+
+playEffect:phone_ring.wav;
+:手机响了，是陈薇。;
+
+陈薇（电话）:你看到邮件了？;
+
+你:看到了。;
+
+陈薇（电话）:有人抢先一步。;
+陈薇（电话）:来我办公室，我们需要商量对策。;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+
+; reputation崩塌：直接被HR约谈
+changeScene:ch6_hr_meeting.txt -when=reputation<30;
+changeScene:ch5_ominous_signs.txt;

@@ -1,0 +1,34 @@
+; 第一章：专注工作
+changeBg:office_room.png;
+bgm:calm_office.mp3;
+
+你:我会全力以赴，不会让您失望。;
+
+changeFigure:chenwei_suit_satisfied.png;
+
+:她点了点头，似乎对这个回答还算满意。;
+
+陈薇:很好。;
+
+:她走近你，伸手整理你的领带。;
+:这个动作很自然，但也很暧昧——像是女朋友在为男友整理衣服。;
+
+陈薇:不过，李昂...那晚的事，我们都是成年人。不必尴尬，也不必刻意回避。;
+
+:她的手指在你的领口停留了一秒，然后松开。;
+
+陈薇:只要你明白，在公司里，我是你的上司。仅此而已。;
+
+:她转身离开。;
+
+陈薇:下午三点，会议室。我期待你的表现。;
+
+setVar:affection=(affection)+15;
+setVar:reputation=(reputation)+12;
+setVar:sanity=(sanity)+8;
+setVar:danger=(danger)+10;
+
+changeFigure:none -left;
+changeFigure:none;
+changeFigure:none -right;
+changeScene:ch1_work_start.txt;

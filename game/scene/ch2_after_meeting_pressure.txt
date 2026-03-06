@@ -1,0 +1,21 @@
+; 第二章 - 会议后：压力与反思
+changeBg:office_desk.png -next;
+bgm:work_pressure.mp3;
+
+:会议结束后，你感到很大的压力。;
+:陈薇的批评让你意识到，自己可能太谨慎了。;
+
+:（在职场上，犹豫不决是大忌...）;
+:（我需要更果断一些。）;
+
+:你开始重新审视方案，思考如何改进。;
+:不知不觉，已经到了晚上。;
+:办公室里只剩下零星几个人。;
+
+:这时，你看到陈薇的办公室还亮着灯。;
+:她也在加班。;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:ch2_work_hard.txt;

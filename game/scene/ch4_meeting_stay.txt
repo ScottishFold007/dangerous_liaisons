@@ -1,0 +1,28 @@
+; 第四章 - 会议室：保持原状 💀 BE触发
+changeBg:meeting_room_dark.png -next;
+bgm:intimate_tension.mp3;
+
+:你们没有分开。;
+
+playEffect:door_open.mp3;
+
+changeFigure:security_uniform_serious.png -left;
+保安:陈总，我...;
+
+:他愣住了。;
+:你和陈薇也愣住了。;
+:三个人，尴尬的沉默。;
+
+保安:对、对不起！我什么都没看到！;
+
+:他匆匆离开，关上门。;
+
+changeFigure:chenwei_suit_desperate.png -left;
+陈薇:完了。;
+
+playEffect:game_over.mp3;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:END_BE3_EXPOSED.txt;

@@ -1,0 +1,17 @@
+; 第三章 - 周末（拒绝后）
+changeBg:apartment_day.png -next;
+bgm:quiet_weekend.mp3;
+
+:周末。;
+:你一个人待在家里。;
+:陈薇没有再联系你。;
+
+:你不知道这样是对是错。;
+:但至少，你们都安全了。;
+
+:（也许，保持距离才是最好的选择...）;
+
+changeFigure:none -left -next;
+changeFigure:none -next;
+changeFigure:none -right -next;
+changeScene:ch3_end.txt;
